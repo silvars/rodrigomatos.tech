@@ -4,52 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rodrigo Matos Silva</title>
-  <meta name="description" content="Site pessoal de Rodrigo Matos Silva — Engenheiro de Software.">
+  <meta name="description" content="Rodrigo Matos Silva — Executivo de Engenharia, liderança em escala e construção de plataformas digitais.">
 
-  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4093317456664462"
-     crossorigin="anonymous"></script>
-
-  <style>
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 20px auto;
-      border: 2px solid #333;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    }
-  </style>
 </head>
-<body class="bg-gray-900 text-gray-100 flex flex-col items-center justify-center min-h-screen p-6">
 
-  <div class="max-w-md text-center">
-    <!-- FOTO LOCAL -->
-    <img src="assets/foto_perfil.jpg" 
-         alt="Foto de Rodrigo Matos Silva" 
-         class="profile-pic">
-    
-    <h1 class="text-3xl font-bold mt-4">Rodrigo Matos Silva</h1>
-    <p class="text-gray-400 mt-2">Profissional com mais de 20 anos de experiência em tecnologia, especializado em arquitetura de software, desenvolvimento e gestão de equipes. Possuo conhecimento sólido em tecnologias Java, Big Data e Cloud Computing , com foco em sistemas de alta escalabilidade e transformação digital em grandes empresas.</p>
+<body class="bg-gray-900 text-gray-100">
 
-    <div class="flex justify-center gap-4 mt-6">
-      <a href="https://github.com/silvars" target="_blank" 
-         class="px-5 py-2 bg-gray-800 hover:bg-gray-700 rounded-full transition">GitHub</a>
-      <a href="https://www.linkedin.com/in/silvars/" target="_blank" 
-         class="px-5 py-2 bg-blue-700 hover:bg-blue-600 rounded-full transition">LinkedIn</a>
+  <div class="max-w-3xl mx-auto px-6 py-10">
+
+    <!-- HEADER -->
+    <div class="text-center">
+      <img src="assets/foto_perfil.jpg" class="w-32 h-32 rounded-full mx-auto mb-4 border border-gray-700">
+
+      <h1 class="text-3xl font-semibold">Rodrigo Matos Silva</h1>
+
+      <p class="text-gray-400 mt-3">
+        Executivo de Engenharia com +20 anos liderando arquitetura, plataformas
+        e transformação digital em ambientes de alta escala.
+      </p>
+
+      <div class="flex justify-center gap-3 mt-6">
+        <a href="https://www.linkedin.com/in/silvars/" target="_blank"
+           class="px-5 py-2 border border-gray-600 rounded-md hover:bg-gray-800">
+           LinkedIn
+        </a>
+
+        <a href="https://github.com/silvars" target="_blank"
+           class="px-5 py-2 border border-gray-600 rounded-md hover:bg-gray-800">
+           GitHub
+        </a>
+      </div>
     </div>
 
-    <footer class="text-gray-500 text-sm mt-10">
-      © <span id="year"></span> Rodrigo Matos Silva. Todos os direitos reservados.
-    </footer>
+    <!-- MÉTRICAS -->
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold mb-4">Impacto</h2>
+
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <div class="border border-gray-700 p-4 rounded">
+          <p class="text-2xl font-semibold">+20</p>
+          <p class="text-sm text-gray-400">anos em tecnologia</p>
+        </div>
+
+        <div class="border border-gray-700 p-4 rounded">
+          <p class="text-2xl font-semibold">170+</p>
+          <p class="text-sm text-gray-400">profissionais liderados</p>
+        </div>
+
+        <div class="border border-gray-700 p-4 rounded">
+          <p class="text-2xl font-semibold">25+</p>
+          <p class="text-sm text-gray-400">squads estruturados</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASES -->
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold mb-4">Experiência relevante</h2>
+
+      <div class="space-y-4">
+
+        <div class="border border-gray-700 p-4 rounded">
+          <h3 class="font-medium">Grupo Casas Bahia</h3>
+          <p class="text-gray-400 text-sm mt-1">
+            Liderança de engenharia em frentes estratégicas (Marketplace, Pagamentos,
+            Crédito e Antifraude), estruturando tribos e plataformas com foco em escala
+            e integração com negócio.
+          </p>
+        </div>
+
+        <div class="border border-gray-700 p-4 rounded">
+          <h3 class="font-medium">Americanas S.A.</h3>
+          <p class="text-gray-400 text-sm mt-1">
+            Liderança de plataformas de atendimento digital e automação,
+            com impacto direto em eficiência operacional e redução de custos.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PRODUTO -->
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold mb-4">Produto</h2>
+
+      <div class="border border-gray-700 p-5 rounded">
+        <h3 class="font-medium">GeoAlert</h3>
+
+        <p class="text-gray-400 text-sm mt-2">
+          Plataforma de alertas por geolocalização baseada em proximidade,
+          projetada para operação contínua em segundo plano.
+        </p>
+
+        <a href="https://www.geoalert.com.br/" target="_blank"
+           class="inline-block mt-3 text-sm text-blue-400 hover:underline">
+           Acessar produto
+        </a>
+      </div>
+    </div>
+
+    <!-- INICIATIVAS -->
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold mb-4">Iniciativas</h2>
+
+      <ul class="text-gray-400 text-sm space-y-2">
+        <li>• Estruturação organizacional de engenharia em larga escala</li>
+        <li>• Evolução de arquitetura para ambientes distribuídos e cloud</li>
+        <li>• Integração entre engenharia, produto e dados</li>
+      </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="text-center mt-12 text-gray-500 text-sm">
+      © <span id="year"></span> Rodrigo Matos Silva
+    </div>
+
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
