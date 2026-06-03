@@ -30,13 +30,14 @@
     #nav.solid .nav-links a { color: var(--muted); }
     #nav.solid .nav-links a:hover { color: var(--accent); background: var(--bg2); }
     .nav-right { display: flex; align-items: center; gap: .2rem; }
-    .lang-btn { font-size: .62rem; font-weight: 600; font-family: "Inter",sans-serif; color: rgba(255,255,255,.4); background: none; border: none; cursor: pointer; padding: .25rem .4rem; transition: color .15s; letter-spacing: .04em; }
-    .lang-btn:hover { color: rgba(255,255,255,.9); }
-    .lang-btn.active { color: var(--gold); }
-    #nav.solid .lang-btn { color: var(--muted); }
-    #nav.solid .lang-btn:hover { color: var(--ink); }
-    #nav.solid .lang-btn.active { color: var(--accent); }
-    .lang-sep { font-size: .55rem; color: rgba(255,255,255,.2); }
+    .lang-btn { background: none; border: none; cursor: pointer; padding: .2rem; display: flex; align-items: center; opacity: .35; transition: opacity .2s, transform .15s; border-radius: 3px; }
+    .lang-btn:hover { opacity: .75; transform: scale(1.08); }
+    .lang-btn.active { opacity: 1; }
+    .lang-btn svg { display: block; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+    #nav.solid .lang-btn { opacity: .4; }
+    #nav.solid .lang-btn:hover { opacity: .8; }
+    #nav.solid .lang-btn.active { opacity: 1; }
+    .lang-sep { font-size: .55rem; color: rgba(255,255,255,.15); margin: 0 .05rem; }
     #nav.solid .lang-sep { color: var(--light); }
 
     /* HERO */
@@ -239,9 +240,26 @@
       <a href="#ai" data-i18n="nav_ai">IA</a>
     </div>
     <div class="nav-right">
-      <button class="lang-btn active" id="btn-pt" onclick="setLang('pt')">PT</button>
-      <span class="lang-sep">/</span>
-      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn active" id="btn-pt" onclick="setLang('pt')" title="Português">
+        <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+          <rect width="20" height="14" fill="#009c3b"/>
+          <rect x="0" y="0" width="6" height="14" fill="#009c3b"/>
+          <rect x="14" y="0" width="6" height="14" fill="#009c3b"/>
+          <polygon points="10,1 19,7 10,13 1,7" fill="#FEDF00"/>
+          <circle cx="10" cy="7" r="3.2" fill="#002776"/>
+          <path d="M7.0,6.2 Q10,5.0 13,6.2" stroke="#fff" stroke-width=".7" fill="none"/>
+        </svg>
+      </button>
+      <span class="lang-sep">·</span>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')" title="English">
+        <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+          <rect width="20" height="14" fill="#012169"/>
+          <path d="M0,0 L20,14 M20,0 L0,14" stroke="#fff" stroke-width="2.8"/>
+          <path d="M0,0 L20,14 M20,0 L0,14" stroke="#C8102E" stroke-width="1.6"/>
+          <path d="M10,0 V14 M0,7 H20" stroke="#fff" stroke-width="4"/>
+          <path d="M10,0 V14 M0,7 H20" stroke="#C8102E" stroke-width="2.4"/>
+        </svg>
+      </button>
     </div>
   </div>
 </nav>
