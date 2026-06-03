@@ -138,12 +138,24 @@
     .product-feat-text { font-size: .82rem; color: rgba(255,255,255,.45); line-height: 1.7; }
 
     /* SKILLS */
-    .skills-layout { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; }
-    .skill-group { padding: 1.8rem; border: 1px solid var(--light); border-radius: 6px; background: #fff; transition: box-shadow .2s, transform .2s; }
-    .skill-group:hover { box-shadow: 0 8px 30px rgba(28,43,74,.08); transform: translateY(-2px); }
-    .skill-cat { font-size: .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; padding-bottom: .7rem; border-bottom: 1px solid var(--light); }
-    .skill-list { font-size: .82rem; color: var(--muted); line-height: 2; }
-    .skill-list strong { color: var(--ink); font-weight: 500; }
+    .skills-layout { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+    .skill-group { padding: 2rem 1.8rem; border: 1px solid var(--light); border-radius: 8px; background: #fff; transition: box-shadow .25s, transform .25s; position: relative; overflow: hidden; }
+    .skill-group::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background: var(--accent); border-radius: 8px 8px 0 0; }
+    .skill-group.g2::before { background: var(--gold); }
+    .skill-group.g3::before { background: var(--accent2); }
+    .skill-group.g4::before { background: var(--muted); }
+    .skill-group:hover { box-shadow: 0 12px 40px rgba(28,43,74,.1); transform: translateY(-3px); }
+    .skill-icon { width: 34px; height: 34px; margin-bottom: 1.2rem; color: var(--accent); display: block; }
+    .skill-group.g2 .skill-icon { color: var(--gold); }
+    .skill-group.g3 .skill-icon { color: var(--accent2); }
+    .skill-group.g4 .skill-icon { color: var(--muted); }
+    .skill-cat { font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); margin-bottom: 1.2rem; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .skill-tag { font-size: .7rem; font-weight: 500; padding: .28rem .75rem; border-radius: 100px; background: var(--bg2); color: var(--muted); border: 1px solid var(--light); line-height: 1.6; }
+    .skill-tag.hi { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .skill-group.g2 .skill-tag.hi { background: rgba(201,168,76,.15); color: #7a5c10; border-color: rgba(201,168,76,.4); }
+    .skill-group.g3 .skill-tag.hi { background: rgba(74,111,165,.12); color: var(--accent); border-color: rgba(74,111,165,.3); }
+    .skill-group.g4 .skill-tag.hi { background: var(--bg3); color: var(--ink); border-color: var(--bg3); }
     .certs-row { margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--light); display: flex; flex-wrap: wrap; gap: .8rem; }
     .cert-badge { display: flex; align-items: center; gap: .5rem; font-size: .72rem; color: var(--muted); background: var(--bg2); padding: .5rem 1rem; border-radius: 4px; border: 1px solid var(--light); }
     .cert-badge::before { content: "◆"; font-size: .38rem; color: var(--gold); }
@@ -171,15 +183,6 @@
     .ai-num-item:first-child { border-left: none; }
     .ai-num-val { font-family: "DM Serif Display",serif; font-size: 2.2rem; color: var(--gold); display: block; line-height: 1; }
     .ai-num-label { font-size: .63rem; color: rgba(255,255,255,.45); letter-spacing: .04em; display: block; margin-top: .5rem; line-height: 1.6; }
-    .ai-sig-header { text-align: center; margin-bottom: 2.5rem; }
-    .ai-sig-title { font-family: "DM Serif Display",serif; font-size: 1.7rem; color: var(--ink); margin-bottom: .4rem; }
-    .ai-sig-sub { font-size: .85rem; color: var(--muted); }
-    .ai-sig-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; }
-    .ai-sig-item { padding: 1.8rem 1.4rem; background: #fff; border: 1px solid var(--light); border-radius: 6px; border-bottom: 3px solid var(--gold); text-align: center; transition: box-shadow .2s, transform .2s; }
-    .ai-sig-item:hover { box-shadow: 0 8px 30px rgba(28,43,74,.08); transform: translateY(-2px); }
-    .ai-sig-num { font-family: "DM Serif Display",serif; font-size: 2rem; color: var(--gold); display: block; margin-bottom: .5rem; line-height: 1; }
-    .ai-sig-name { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); margin-bottom: .5rem; }
-    .ai-sig-desc { font-size: .78rem; color: var(--muted); line-height: 1.65; }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
@@ -217,7 +220,6 @@
       .numbers-grid { grid-template-columns: repeat(2,1fr); }
       .about-pillars { grid-template-columns: 1fr; }
       .skills-layout { grid-template-columns: 1fr; }
-      .ai-sig-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -520,29 +522,51 @@
       <div class="sec-eyebrow reveal" style="justify-content:center;" data-i18n="sk_eyebrow">Competências</div>
       <h2 class="sec-title reveal" style="text-align:center;" data-i18n="sk_title">O que eu domino</h2>
     </div>
-    <div class="skills-layout reveal reveal-d1">
-      <div class="skill-group">
+    <div class="skills-layout">
+      <div class="skill-group reveal reveal-d1">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         <div class="skill-cat" data-i18n="sk1">Liderança &amp; Gestão</div>
-        <div class="skill-list">
-          <strong>People Management</strong><br>Engineering Management<br>Agile · Scrum · OKRs<br>Hiring &amp; Coaching<br>Comunicação executiva
+        <div class="skill-tags">
+          <span class="skill-tag hi">People Management</span>
+          <span class="skill-tag hi">Eng. Management</span>
+          <span class="skill-tag">Agile · Scrum</span>
+          <span class="skill-tag">OKRs</span>
+          <span class="skill-tag">Hiring &amp; Coaching</span>
+          <span class="skill-tag">Comunicação exec.</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group g2 reveal reveal-d2">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
         <div class="skill-cat" data-i18n="sk2">Arquitetura</div>
-        <div class="skill-list">
-          <strong>Microservices</strong><br>Distributed Systems<br>Cloud · AWS · GCP<br>API Design · Event-driven<br>Alta disponibilidade
+        <div class="skill-tags">
+          <span class="skill-tag hi">Microservices</span>
+          <span class="skill-tag hi">Distributed Systems</span>
+          <span class="skill-tag">Cloud · AWS · GCP</span>
+          <span class="skill-tag">Event-driven</span>
+          <span class="skill-tag">API Design</span>
+          <span class="skill-tag">Alta disponibilidade</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group g3 reveal reveal-d3">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         <div class="skill-cat" data-i18n="sk3">Tecnologias</div>
-        <div class="skill-list">
-          <strong>Java · Spring · Python</strong><br>Kafka · Docker · K8s<br>MongoDB · Redis · Spark<br>React Native · Expo<br>SQL · NoSQL
+        <div class="skill-tags">
+          <span class="skill-tag hi">Java · Spring</span>
+          <span class="skill-tag hi">Python</span>
+          <span class="skill-tag">Kafka · Docker · K8s</span>
+          <span class="skill-tag">MongoDB · Redis</span>
+          <span class="skill-tag">React Native · Expo</span>
+          <span class="skill-tag">SQL · NoSQL</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group g4 reveal reveal-d4">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <div class="skill-cat" data-i18n="sk4">Idiomas</div>
-        <div class="skill-list">
-          <strong>Português</strong> — nativo<br><strong>Inglês</strong> — avançado<br>Espanhol — intermediário<br>Francês — básico
+        <div class="skill-tags">
+          <span class="skill-tag hi">Português — nativo</span>
+          <span class="skill-tag hi">Inglês — avançado</span>
+          <span class="skill-tag">Espanhol — interm.</span>
+          <span class="skill-tag">Francês — básico</span>
         </div>
       </div>
     </div>
@@ -605,34 +629,6 @@
       </div>
     </div>
 
-    <div class="reveal reveal-d3">
-      <div class="ai-sig-header">
-        <div class="ai-sig-title" data-i18n="ai_sig_title">O que te torna raro</div>
-        <p class="ai-sig-sub" data-i18n="ai_sig_sub">Quatro dimensões que raramente vêm juntas na mesma pessoa.</p>
-      </div>
-      <div class="ai-sig-grid">
-        <div class="ai-sig-item">
-          <span class="ai-sig-num">01</span>
-          <div class="ai-sig-name" data-i18n="sig_1t">Visão de negócio</div>
-          <div class="ai-sig-desc" data-i18n="sig_1b">Entende o problema real antes de propor solução.</div>
-        </div>
-        <div class="ai-sig-item">
-          <span class="ai-sig-num">02</span>
-          <div class="ai-sig-name" data-i18n="sig_2t">Profundidade em dados</div>
-          <div class="ai-sig-desc" data-i18n="sig_2b">Sabe estruturar, conectar e usar dados para decidir.</div>
-        </div>
-        <div class="ai-sig-item">
-          <span class="ai-sig-num">03</span>
-          <div class="ai-sig-name" data-i18n="sig_3t">Execução de produto</div>
-          <div class="ai-sig-desc" data-i18n="sig_3b">Tira do papel — do MVP ao lançamento.</div>
-        </div>
-        <div class="ai-sig-item">
-          <span class="ai-sig-num">04</span>
-          <div class="ai-sig-name" data-i18n="sig_4t">IA na prática</div>
-          <div class="ai-sig-desc" data-i18n="sig_4b">Acelera tudo acima sem virar escravo da ferramenta.</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -712,11 +708,6 @@ const i18n = {
     ai_s1v:"3–10×", ai_s1l:"ganho em análise<br>e estruturação",
     ai_s2v:"−50%", ai_s2l:"tempo de criação<br>de docs estratégicos",
     ai_s3v:"0→∞", ai_s3l:"fluxos semi-automatizados<br>de gestão e análise",
-    ai_sig_title:"O que te torna raro", ai_sig_sub:"Quatro dimensões que raramente vêm juntas na mesma pessoa.",
-    sig_1t:"Visão de negócio", sig_1b:"Entende o problema real antes de propor solução.",
-    sig_2t:"Profundidade em dados", sig_2b:"Sabe estruturar, conectar e usar dados para decidir.",
-    sig_3t:"Execução de produto", sig_3b:"Tira do papel — do MVP ao lançamento.",
-    sig_4t:"IA na prática", sig_4b:"Acelera tudo acima sem virar escravo da ferramenta.",
     footer_tag:"Engenharia · Produto · Dados"
   },
   en: {
@@ -775,11 +766,6 @@ const i18n = {
     ai_s1v:"3–10×", ai_s1l:"gain in analysis<br>and structuring",
     ai_s2v:"−50%", ai_s2l:"time to create<br>strategic documents",
     ai_s3v:"0→∞", ai_s3l:"semi-automated<br>management workflows",
-    ai_sig_title:"What makes you rare", ai_sig_sub:"Four dimensions that rarely come together in one person.",
-    sig_1t:"Business vision", sig_1b:"Understands the real problem before proposing a solution.",
-    sig_2t:"Data depth", sig_2b:"Knows how to structure, connect, and use data to decide.",
-    sig_3t:"Product execution", sig_3b:"Gets it done — from MVP to launch.",
-    sig_4t:"AI in practice", sig_4b:"Accelerates everything above without becoming a slave to the tool.",
     footer_tag:"Engineering · Product · Data"
   }
 };
