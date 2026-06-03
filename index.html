@@ -124,6 +124,8 @@
     .impact-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
     .exp-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
     .tag { font-size: .58rem; font-weight: 500; letter-spacing: .04em; color: var(--accent); background: var(--bg2); padding: .2rem .6rem; border-radius: 3px; border: 1px solid rgba(74,111,165,.2); }
+    .exp-item.highlight { border-left: 3px solid var(--gold); padding-left: 1.5rem; margin-left: -1.5rem; }
+    .exp-callout { margin-top: 1.4rem; padding: 1rem 1.2rem; background: rgba(201,168,76,.07); border-left: 2px solid var(--gold); border-radius: 0 4px 4px 0; font-size: .83rem; font-style: italic; color: var(--ink); line-height: 1.75; }
 
     /* PRODUTO */
     .product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
@@ -430,7 +432,7 @@
           </div>
         </div>
 
-        <div class="exp-item reveal reveal-d2">
+        <div class="exp-item highlight reveal reveal-d2">
           <div class="exp-header">
             <div>
               <div class="exp-company">Universidade Paulista — UNIP</div>
@@ -439,6 +441,12 @@
             <div class="exp-date">Set 2011 — Jan 2017</div>
           </div>
           <p class="exp-desc" data-i18n="unip_desc">6 anos ensinando POO, Android, Banco de Dados e Lógica para centenas de alunos — em paralelo à carreira de engenheiro. A sala de aula ensinou o que nenhum projeto ensina: como explicar o mesmo conceito de cinco formas diferentes até a pessoa entender. Pesquisa em Data Mining.</p>
+          <blockquote class="exp-callout" data-i18n="unip_callout">"A sala de aula ensinou o que nenhum projeto ensina: como explicar o mesmo conceito de cinco formas diferentes até a pessoa entender."</blockquote>
+          <div class="exp-impact">
+            <div class="impact-pill"><div class="dot"></div><span data-i18n="unip_i1">6 anos de docência</span></div>
+            <div class="impact-pill"><div class="dot"></div><span data-i18n="unip_i2">Centenas de alunos</span></div>
+            <div class="impact-pill"><div class="dot"></div><span data-i18n="unip_i3">Em paralelo à carreira de engenheiro</span></div>
+          </div>
           <div class="exp-tags">
             <span class="tag">Java</span><span class="tag">Android</span><span class="tag">C++</span>
             <span class="tag">SQL</span><span class="tag">Data Mining</span>
@@ -676,6 +684,8 @@ const i18n = {
     ame_i1:"−R$2MM/mês em custo", ame_i2:"até 5× em segmentação", ame_i3:"30 engenheiros liderados",
     unip_role:"Professor Universitário",
     unip_desc:"6 anos ensinando POO, Android, Banco de Dados e Lógica para centenas de alunos — em paralelo à carreira de engenheiro. A sala de aula ensinou o que nenhum projeto ensina: como explicar o mesmo conceito de cinco formas diferentes até a pessoa entender. Pesquisa em Data Mining.",
+    unip_callout:"\"A sala de aula ensinou o que nenhum projeto ensina: como explicar o mesmo conceito de cinco formas diferentes até a pessoa entender.\"",
+    unip_i1:"6 anos de docência", unip_i2:"Centenas de alunos", unip_i3:"Em paralelo à carreira de engenheiro",
     ccb_role:"Analista Sênior / Especialista",
     ccb_desc:"Sistemas críticos de crédito, garantias e contratos em ambiente bancário regulado. Integração de plataformas legadas e modernas, modelagem de dados. Cada decisão de arquitetura tinha implicação regulatória direta.",
     tft_role:"Arquiteto de Software",
@@ -734,6 +744,8 @@ const i18n = {
     ame_i1:"−R$2MM/month in cost", ame_i2:"up to 5× segmentation gain", ame_i3:"30 engineers led",
     unip_role:"University Professor",
     unip_desc:"6 years teaching OOP, Android, Databases, and Logic to hundreds of students — while working as an engineer in parallel. The classroom taught something no project does: how to explain the same concept five different ways until it clicks. Research in Data Mining.",
+    unip_callout:"\"The classroom taught something no project does: how to explain the same concept five different ways until it clicks.\"",
+    unip_i1:"6 years of teaching", unip_i2:"Hundreds of students", unip_i3:"Alongside an engineering career",
     ccb_role:"Senior Systems Analyst / Specialist",
     ccb_desc:"Critical systems for credit, warranties, and contracts in a regulated banking environment. Integration between legacy and modern platforms, data modeling. Every architecture decision had direct regulatory implications.",
     tft_role:"Software Architect",
