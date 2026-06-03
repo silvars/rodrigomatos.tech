@@ -126,6 +126,30 @@
     .exp-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
     .tag { font-size: .58rem; font-weight: 500; letter-spacing: .04em; color: var(--accent); background: var(--bg2); padding: .2rem .6rem; border-radius: 3px; border: 1px solid rgba(74,111,165,.2); }
     .exp-item.highlight { border-left: 3px solid var(--gold); padding-left: 1.5rem; margin-left: -1.5rem; }
+    .exp-kpi { display: grid; grid-template-columns: repeat(4,1fr); margin-top: 1.6rem; border: 1px solid var(--light); border-radius: 6px; overflow: hidden; }
+    .exp-kpi-item { padding: 1rem 1.2rem; text-align: center; border-left: 1px solid var(--light); background: var(--bg); position: relative; }
+    .exp-kpi-item:first-child { border-left: none; }
+    .exp-kpi-item::before { content:""; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+    .exp-kpi-item:nth-child(1)::before { background: var(--accent); }
+    .exp-kpi-item:nth-child(2)::before { background: var(--gold); }
+    .exp-kpi-item:nth-child(3)::before { background: var(--accent2); }
+    .exp-kpi-item:nth-child(4)::before { background: #8b5cf6; }
+    .exp-kpi-val { font-family: "DM Serif Display",serif; font-size: 1.9rem; font-weight: 400; color: var(--ink); display: block; line-height: 1; }
+    .exp-kpi-label { font-size: .6rem; font-weight: 500; letter-spacing: .05em; color: var(--muted); display: block; margin-top: .35rem; line-height: 1.4; }
+    @media (max-width: 600px) { .exp-kpi { grid-template-columns: repeat(2,1fr); } }
+    .exp-kpi-fin-header { font-size: .62rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-top: 1.2rem; margin-bottom: .5rem; }
+    .exp-kpi--fin { grid-template-columns: repeat(3,1fr); margin-top: 0; }
+    .exp-kpi--fin .exp-kpi-item:nth-child(1)::before { background: #16a34a; }
+    .exp-kpi--fin .exp-kpi-item:nth-child(2)::before { background: #15803d; }
+    .exp-kpi--fin .exp-kpi-item:nth-child(3)::before { background: #14532d; }
+    .exp-kpi--fin .exp-kpi-val { color: #16a34a; font-size: 1.5rem; }
+    @media (max-width: 600px) { .exp-kpi--fin { grid-template-columns: repeat(3,1fr); } }
+    .exp-kpi--mdm { grid-template-columns: repeat(3,1fr); margin-top: 0; }
+    .exp-kpi--mdm .exp-kpi-item:nth-child(1)::before { background: var(--accent); }
+    .exp-kpi--mdm .exp-kpi-item:nth-child(2)::before { background: var(--accent2); }
+    .exp-kpi--mdm .exp-kpi-item:nth-child(3)::before { background: #818cf8; }
+    .exp-kpi--mdm .exp-kpi-val { color: var(--accent); font-size: 1.5rem; }
+    @media (max-width: 600px) { .exp-kpi--mdm { grid-template-columns: repeat(3,1fr); } }
     .exp-callout { margin-top: 1.4rem; padding: 1rem 1.2rem; background: rgba(201,168,76,.07); border-left: 2px solid var(--gold); border-radius: 0 4px 4px 0; font-size: .83rem; font-style: italic; color: var(--ink); line-height: 1.75; }
 
     /* PRODUTO */
@@ -418,11 +442,54 @@
             </div>
             <div class="exp-date">Jul 2022 — <span data-i18n="present">Atual</span></div>
           </div>
-          <p class="exp-desc" data-i18n="gcb_desc">5 tribos, 25 squads, 170+ engenheiros. Responsável por pagamentos, marketplace, antifraude, serviços financeiros e crédito ao consumidor. Construí a governança técnica que conecta lojas físicas, e-commerce e B2B numa arquitetura distribuída de alta disponibilidade.</p>
-          <div class="exp-impact">
-            <div class="impact-pill"><div class="dot"></div><span data-i18n="gcb_i1">170+ engenheiros gerenciados</span></div>
-            <div class="impact-pill"><div class="dot"></div><span data-i18n="gcb_i2">5 tribos · 25 squads</span></div>
-            <div class="impact-pill"><div class="dot"></div><span data-i18n="gcb_i3">Pagamentos + Antifraude</span></div>
+          <p class="exp-desc" data-i18n="gcb_desc">5 tribos, 25 squads, 170+ engenheiros. Responsável por pagamentos, marketplace, antifraude, serviços financeiros, crédito ao consumidor e seguros &amp; serviços. Construí a governança técnica que conecta lojas físicas, e-commerce e B2B numa arquitetura distribuída de alta disponibilidade.</p>
+          <div class="exp-kpi">
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">170+</span>
+              <span class="exp-kpi-label" data-i18n="gcb_k1">engenheiros<br>liderados</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">25+</span>
+              <span class="exp-kpi-label" data-i18n="gcb_k2">squads<br>estruturados</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">5</span>
+              <span class="exp-kpi-label" data-i18n="gcb_k3">tribos de<br>produto</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">4+</span>
+              <span class="exp-kpi-label" data-i18n="gcb_k4">anos no<br>cargo</span>
+            </div>
+          </div>
+          <div class="exp-kpi-fin-header" data-i18n="gcb_fin_header">S&amp;S · Impacto Financeiro — Descomissionamento Mainframe</div>
+          <div class="exp-kpi exp-kpi--fin">
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">R$ 310k</span>
+              <span class="exp-kpi-label" data-i18n="gcb_f1">economia/mês<br>projetada</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">+302%</span>
+              <span class="exp-kpi-label" data-i18n="gcb_f2">ROI<br>em 5 anos</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">19 meses</span>
+              <span class="exp-kpi-label" data-i18n="gcb_f3">payback<br>do investimento</span>
+            </div>
+          </div>
+          <div class="exp-kpi-fin-header" data-i18n="gcb_mdm_header">MDM · Plataforma Corporativa de Cliente — Customer 360</div>
+          <div class="exp-kpi exp-kpi--mdm">
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">360°</span>
+              <span class="exp-kpi-label" data-i18n="gcb_m1">Customer View<br>habilitado</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">10+</span>
+              <span class="exp-kpi-label" data-i18n="gcb_m2">domínios de<br>negócio integrados</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">−40%</span>
+              <span class="exp-kpi-label" data-i18n="gcb_m3">esforço em<br>integrações futuras</span>
+            </div>
           </div>
           <div class="exp-tags">
             <span class="tag">Marketplace</span><span class="tag">Payments</span><span class="tag">Anti-Fraud</span>
@@ -695,8 +762,13 @@ const i18n = {
     exp_sub:"De arquiteto a executive manager — cada passo com maior escopo, times maiores e problemas mais complexos.",
     present:"Atual",
     gcb_role:"Software Engineering Executive Manager",
-    gcb_desc:"5 tribos, 25 squads, 170+ engenheiros. Responsável por pagamentos, marketplace, antifraude, serviços financeiros e crédito ao consumidor. Construí a governança técnica que conecta lojas físicas, e-commerce e B2B numa arquitetura distribuída de alta disponibilidade.",
+    gcb_desc:"5 tribos, 25 squads, 170+ engenheiros. Responsável por pagamentos, marketplace, antifraude, serviços financeiros, crédito ao consumidor e seguros &amp; serviços. Construí a governança técnica que conecta lojas físicas, e-commerce e B2B numa arquitetura distribuída de alta disponibilidade.",
     gcb_i1:"170+ engenheiros gerenciados", gcb_i2:"5 tribos · 25 squads", gcb_i3:"Pagamentos + Antifraude",
+    gcb_k1:"engenheiros<br>liderados", gcb_k2:"squads<br>estruturados", gcb_k3:"tribos de<br>produto", gcb_k4:"anos no<br>cargo",
+    gcb_fin_header:"S&amp;S · Impacto Financeiro — Descomissionamento Mainframe",
+    gcb_f1:"economia/mês<br>projetada", gcb_f2:"ROI<br>em 5 anos", gcb_f3:"payback<br>do investimento",
+    gcb_mdm_header:"MDM · Plataforma Corporativa de Cliente — Customer 360",
+    gcb_m1:"Customer View<br>habilitado", gcb_m2:"domínios de<br>negócio integrados", gcb_m3:"esforço em<br>integrações futuras",
     ame_role:"Engineering Manager · Tech Manager · Tech Lead",
     ame_desc:"5 anos e 7 meses, três papéis com escopo crescente. Conduzi a automação de atendimento via WhatsApp e ChatBot que cortou R$2MM/mês em custo operacional. 30 engenheiros em frete, canais digitais e CRM. Responsável por segmentação de clientes — ganhos de até 5× na relevância das comunicações.",
     ame_i1:"−R$2MM/mês em custo", ame_i2:"até 5× em segmentação", ame_i3:"30 engenheiros liderados",
@@ -755,8 +827,13 @@ const i18n = {
     exp_sub:"From architect to executive manager — each step with broader scope, larger teams, and more complex problems.",
     present:"Present",
     gcb_role:"Software Engineering Executive Manager",
-    gcb_desc:"5 tribes, 25 squads, 170+ engineers. Responsible for payments, marketplace, anti-fraud, financial services, and consumer credit. Built the technical governance connecting physical stores, e-commerce, and B2B in a high-availability distributed architecture.",
+    gcb_desc:"5 tribes, 25 squads, 170+ engineers. Responsible for payments, marketplace, anti-fraud, financial services, consumer credit, and insurance &amp; services. Built the technical governance connecting physical stores, e-commerce, and B2B in a high-availability distributed architecture.",
     gcb_i1:"170+ engineers managed", gcb_i2:"5 tribes · 25 squads", gcb_i3:"Payments + Anti-Fraud",
+    gcb_k1:"engineers<br>led", gcb_k2:"squads<br>structured", gcb_k3:"product<br>tribes", gcb_k4:"years in<br>the role",
+    gcb_fin_header:"S&amp;S · Financial Impact — Mainframe Decommissioning",
+    gcb_f1:"projected<br>monthly savings", gcb_f2:"5-year<br>ROI", gcb_f3:"investment<br>payback",
+    gcb_mdm_header:"MDM · Corporate Customer Platform — Customer 360",
+    gcb_m1:"Customer View<br>enabled", gcb_m2:"business domains<br>integrated", gcb_m3:"reduction in<br>future integrations",
     ame_role:"Engineering Manager · Tech Manager · Tech Lead",
     ame_desc:"5 years and 7 months across three roles with growing scope. Led customer service automation via WhatsApp and ChatBot that reduced R$2MM/month in operational costs. 30 engineers across freight, digital channels, and CRM. Led customer segmentation — up to 5× improvement in communication relevance.",
     ame_i1:"−R$2MM/month in cost", ame_i2:"up to 5× segmentation gain", ame_i3:"30 engineers led",
