@@ -234,7 +234,10 @@
     .ai-num-val { font-family: "DM Serif Display",serif; font-size: 2.2rem; color: var(--gold); display: block; line-height: 1; }
     .ai-num-label { font-size: .63rem; color: rgba(255,255,255,.45); letter-spacing: .04em; display: block; margin-top: .5rem; line-height: 1.6; }
 
-    /* REVEAL */
+    /* float só aparece em telas largas o suficiente para não colidir */
+    @media (max-width: 1279px) {
+      .hero-float { display: none; }
+    }
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.left { transform: translateX(-24px); }
     .reveal.right { transform: translateX(24px); }
@@ -248,7 +251,6 @@
       .hero-main { flex-direction: column; text-align: center; padding-top: 120px; gap: 3rem; }
       .hero-left { order: 2; } .hero-right { order: 1; }
       .hero-desc { margin: 0 auto 2.5rem; } .hero-cta { justify-content: center; }
-      .hero-float { display: none; }
       .hero-photo-wrap { width: 200px; height: 240px; margin: 0 auto; }
       .numbers-grid { grid-template-columns: repeat(2,1fr); gap: 1rem; }
       .num-item { border-left: none; padding: 1rem; }
