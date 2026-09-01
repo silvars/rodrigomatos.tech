@@ -800,7 +800,7 @@
 <section class="section section-alt" id="ai">
   <div class="container">
     <div style="text-align:center; margin-bottom: 3.5rem;">
-      <div class="sec-eyebrow reveal" style="justify-content:center;" data-i18n="ai_eyebrow">AI &amp; Emerging Technology</div>
+      <div class="sec-eyebrow reveal" style="justify-content:center;" data-i18n="ai_eyebrow">IA &amp; Tecnologia Emergente</div>
       <h2 class="sec-title reveal" style="text-align:center;" data-i18n="ai_title">IA como infraestrutura<br>de decisão</h2>
       <p class="sec-sub reveal reveal-d2" style="text-align:center; margin: .9rem auto 0; max-width:520px;" data-i18n="ai_sub">Exploro IA não como tecnologia isolada, mas como infraestrutura para tomada de decisão, produtividade e desenvolvimento de produto — aplicada ao trabalho real.</p>
     </div>
@@ -855,7 +855,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-name">Rodrigo Matos Silva</div>
-      <div class="footer-tag" data-i18n="footer_tag">Engineering Executive · Technology · People · Business</div>
+      <div class="footer-tag" data-i18n="footer_tag">Executivo de Engenharia · Tecnologia · Pessoas · Negócio</div>
       <div class="footer-copy">© <span id="year"></span> · rodrigomatos.tech</div>
     </div>
     <div class="footer-links">
@@ -889,10 +889,10 @@ const i18n = {
     lp4l:"Pessoas", lp4t:"Desenvolvimento individual, cultura de feedback e ambientes onde as melhores ideias vençam — independente de cargo.",
     about_eyebrow:"Sobre mim", about_title:"Do código à<br>decisão estratégica",
     about_body:"<p>Trabalho com tecnologia desde 2003. Comecei escrevendo código, passei por arquitetura de sistemas e cheguei à liderança de engenharia — não apenas por evolução de cargo, mas porque percebi que os problemas mais difíceis raramente são apenas técnicos.</p><p>São problemas de pessoas, organização, estratégia e execução.</p><p>Por seis anos fui professor universitário em paralelo à carreira de engenheiro. A experiência mudou minha forma de comunicar ideias complexas, desenvolver pessoas e construir consenso.</p><p>Hoje lidero organizações de engenharia em ambientes de alta complexidade, conectando tecnologia, produto, dados e negócio. Meu trabalho está na interseção entre <strong>engenharia que escala, produtos que geram valor e dados que orientam decisões</strong>.</p>",
-    p1t:"Engineering", p1b:"Arquitetura distribuída, plataformas críticas, alta disponibilidade e organizações de engenharia em escala.",
-    p2t:"Product", p2b:"Da estratégia ao roadmap. Construção de produtos digitais, discovery, execução e lançamento.",
-    p3t:"Data", p3b:"Dados, analytics, segmentação, MDM, Customer 360 e decisões orientadas por métricas de negócio.",
-    p4t:"Leadership", p4b:"People management, organizational design, estratégia, cultura, alinhamento e execução com impacto.",
+    p1t:"Engenharia", p1b:"Arquitetura distribuída, plataformas críticas, alta disponibilidade e organizações de engenharia em escala.",
+    p2t:"Produto", p2b:"Da estratégia ao roadmap. Construção de produtos digitais, discovery, execução e lançamento.",
+    p3t:"Dados", p3b:"Dados, analytics, segmentação, MDM, Customer 360 e decisões orientadas por métricas de negócio.",
+    p4t:"Liderança", p4b:"People management, organizational design, estratégia, cultura, alinhamento e execução com impacto.",
     exp_eyebrow:"Trajetória", exp_title:"20 anos<br>de construção",
     exp_sub:"De arquiteto de software a executive manager — cada passo com maior escopo, times maiores e problemas mais complexos.",
     present:"Atual",
@@ -930,10 +930,10 @@ const i18n = {
     tf3t:"Busca inteligente", tf3b:"Aceita ticker (PETR4, VALE3) ou nome da empresa. Foco total na B3.",
     tf4t:"Rotação automática", tf4b:"Alterna entre ativos cadastrados a cada minuto. Ou fixe um como padrão no ícone.",
     sk_eyebrow:"Competências", sk_title:"O que eu domino",
-    sk1:"Liderança &amp; Gestão", sk2:"Tecnologia", sk3:"Data &amp; AI", sk4:"Técnico",
+    sk1:"Liderança &amp; Gestão", sk2:"Tecnologia", sk3:"Dados &amp; IA", sk4:"Técnico",
     lang1:"Português — nativo", lang2:"English — avançado", lang3:"Español — intermediário", lang4:"Français — básico",
     cert:"Pós-graduação em Arquitetura de Software — FIAP",
-    ai_eyebrow:"AI &amp; Emerging Technology", ai_title:"IA como infraestrutura<br>de decisão",
+    ai_eyebrow:"IA &amp; Tecnologia Emergente", ai_title:"IA como infraestrutura<br>de decisão",
     ai_sub:"Exploro IA não como tecnologia isolada, mas como infraestrutura para tomada de decisão, produtividade e desenvolvimento de produto — aplicada ao trabalho real.",
     ai_c1n:"01 — Liderança", ai_c1t:"IA no contexto de gestão",
     ai_c1b:"Fluxos de gestão assistidos por IA: estrutura de 1:1, avaliações e feedbacks. Consolidação de histórico de pessoas, identificação de padrões e gaps — de forma consistente, não episódica.",
@@ -950,7 +950,7 @@ const i18n = {
     ai_s1v:"até 10×", ai_s1l:"em fluxos selecionados<br>de análise e estruturação",
     ai_s2v:"até −50%", ai_s2l:"de tempo em criação<br>de docs estratégicos selecionados",
     ai_s3v:"0→∞", ai_s3l:"fluxos semi-automatizados<br>de gestão e análise",
-    footer_tag:"Engineering Executive · Technology · People · Business"
+    footer_tag:"Executivo de Engenharia · Tecnologia · Pessoas · Negócio"
   },
   en: {
     hero_eyebrow:"Engineering Executive",
@@ -1036,6 +1036,7 @@ const i18n = {
 };
 
 function setLang(lang) {
+  localStorage.setItem('lang', lang);
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
   document.title = lang === "pt"
     ? "Rodrigo Matos Silva | Engineering Executive | Tecnologia, Produto & Dados"
@@ -1069,6 +1070,7 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
 
 document.getElementById("year").textContent = new Date().getFullYear();
+setLang(localStorage.getItem('lang') || 'pt');
 </script>
 </body>
 </html>
