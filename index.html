@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rodrigo Matos Silva — Engenharia · Produto · Dados</title>
-  <meta name="description" content="Rodrigo Matos Silva — 20 anos na interseção de engenharia, produto e dados. Engineering Executive no Grupo Casas Bahia.">
+  <title>Rodrigo Matos Silva | Engineering Executive | Tecnologia, Produto &amp; Dados</title>
+  <meta name="description" content="Engineering Executive with 20+ years of experience leading engineering organizations, technology transformation and critical digital platforms across payments, marketplace, data and financial services.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,8 +24,8 @@
     .nav-inner { max-width: 1080px; margin: 0 auto; padding: 0 2.5rem; height: 58px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { font-size: .72rem; font-weight: 700; letter-spacing: .06em; color: rgba(255,255,255,.9); text-decoration: none; transition: color .3s; }
     #nav.solid .nav-logo { color: var(--ink); }
-    .nav-links { display: flex; gap: .25rem; }
-    .nav-links a { font-size: .65rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.55); text-decoration: none; padding: .4rem .85rem; border-radius: 4px; transition: color .2s, background .2s; }
+    .nav-links { display: flex; gap: .1rem; }
+    .nav-links a { font-size: .62rem; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; color: rgba(255,255,255,.55); text-decoration: none; padding: .4rem .7rem; border-radius: 4px; transition: color .2s, background .2s; }
     .nav-links a:hover { color: #fff; background: rgba(255,255,255,.1); }
     #nav.solid .nav-links a { color: var(--muted); }
     #nav.solid .nav-links a:hover { color: var(--accent); background: var(--bg2); }
@@ -39,6 +39,16 @@
     #nav.solid .lang-btn.active { opacity: 1; }
     .lang-sep { font-size: .55rem; color: rgba(255,255,255,.15); margin: 0 .05rem; }
     #nav.solid .lang-sep { color: var(--light); }
+
+    /* HAMBURGER */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: .4rem; flex-direction: column; gap: 4px; margin-left: .6rem; }
+    .hamburger span { display: block; width: 20px; height: 1.5px; background: rgba(255,255,255,.7); transition: all .25s; border-radius: 1px; }
+    #nav.solid .hamburger span { background: var(--ink); }
+    .mobile-menu { display: none; position: fixed; top: 58px; left: 0; right: 0; background: rgba(255,255,255,.98); backdrop-filter: blur(12px); z-index: 199; padding: 1rem 2.5rem 1.5rem; border-bottom: 1px solid var(--light); box-shadow: 0 8px 30px rgba(15,28,53,.06); }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-decoration: none; padding: .8rem 0; border-bottom: 1px solid var(--bg3); transition: color .2s; }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--accent); }
 
     /* HERO */
     .hero { min-height: 100vh; background: var(--ink); display: grid; grid-template-rows: 1fr auto; position: relative; overflow: hidden; }
@@ -63,10 +73,6 @@
     .hero-photo-wrap { width: 280px; height: 340px; position: relative; }
     .hero-photo-wrap::before { content: ""; position: absolute; inset: -12px -12px 12px 12px; border: 1px solid rgba(74,111,165,.35); border-radius: 6px; pointer-events: none; }
     .hero-photo { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: block; }
-    .hero-float { position: absolute; right: -110px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 1.4rem; }
-    .hero-float-item { text-align: right; }
-    .hero-float-val { font-family: "DM Serif Display",serif; font-size: 1.9rem; color: #fff; line-height: 1; display: block; }
-    .hero-float-lbl { font-size: .58rem; color: rgba(255,255,255,.35); letter-spacing: .06em; text-transform: uppercase; display: block; margin-top: .2rem; }
     .hero-bar { border-top: 1px solid rgba(255,255,255,.07); padding: 1.6rem 2.5rem; }
     .hero-bar-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
     .hero-socials { display: flex; gap: 1.8rem; }
@@ -89,12 +95,24 @@
 
     /* NUMBERS BAND */
     .numbers-band { background: var(--ink2); padding: 4rem 0; }
-    .numbers-grid { display: grid; grid-template-columns: repeat(6,1fr); }
+    .numbers-grid { display: grid; grid-template-columns: repeat(4,1fr); }
     .num-item { padding: 0 2rem; border-left: 1px solid rgba(255,255,255,.08); text-align: center; }
     .num-item:first-child { border-left: none; }
     .num-val { font-family: "DM Serif Display",serif; font-size: 2.4rem; font-weight: 400; color: #fff; display: block; line-height: 1; }
     .num-val.accent { color: var(--gold); }
     .num-label { font-size: .65rem; color: rgba(255,255,255,.38); letter-spacing: .04em; line-height: 1.5; display: block; margin-top: .5rem; }
+
+    /* LEADERSHIP SECTION */
+    .lead-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .lead-quote { font-family: "DM Serif Display",serif; font-size: clamp(1.3rem,2.2vw,1.75rem); font-weight: 400; color: var(--ink); line-height: 1.6; letter-spacing: -.02em; }
+    .lead-quote::before { content: "\201C"; font-size: 3rem; color: var(--gold); line-height: 0; vertical-align: -.5rem; margin-right: .2rem; opacity: .5; }
+    .lead-body { font-size: .95rem; line-height: 1.95; color: #4a5568; }
+    .lead-body p + p { margin-top: 1.4rem; }
+    .lead-body strong { color: var(--ink); font-weight: 600; }
+    .lead-principles { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem; }
+    .lead-principle { display: flex; flex-direction: column; gap: .5rem; padding: 1.2rem 1.4rem; background: var(--bg3); border-radius: 4px; border-left: 2px solid var(--gold); }
+    .lead-principle-label { font-size: .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+    .lead-principle-text { font-size: .82rem; color: var(--muted); line-height: 1.7; }
 
     /* SOBRE */
     .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
@@ -105,7 +123,7 @@
     .about-body p + p { margin-top: 1.4rem; }
     .about-body strong { color: var(--ink); font-weight: 600; }
     .about-body em { color: var(--accent); font-style: normal; font-weight: 500; }
-    .about-pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-top: 2.8rem; }
+    .about-pillars { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.2rem; margin-top: 2.8rem; }
     .pillar { padding: 1.4rem 1.2rem; background: var(--bg2); border-radius: 4px; border-top: 2px solid var(--accent); }
     .pillar-title { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; }
     .pillar-text { font-size: .78rem; color: var(--muted); line-height: 1.7; }
@@ -137,13 +155,13 @@
     .exp-kpi-val { font-family: "DM Serif Display",serif; font-size: 1.9rem; font-weight: 400; color: var(--ink); display: block; line-height: 1; }
     .exp-kpi-label { font-size: .6rem; font-weight: 500; letter-spacing: .05em; color: var(--muted); display: block; margin-top: .35rem; line-height: 1.4; }
     @media (max-width: 600px) { .exp-kpi { grid-template-columns: repeat(2,1fr); } }
-    .exp-kpi-fin-header { font-size: .62rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-top: 1.2rem; margin-bottom: .5rem; }
-    .exp-kpi--fin { grid-template-columns: repeat(3,1fr); margin-top: 0; }
-    .exp-kpi--fin .exp-kpi-item:nth-child(1)::before { background: #16a34a; }
-    .exp-kpi--fin .exp-kpi-item:nth-child(2)::before { background: #15803d; }
-    .exp-kpi--fin .exp-kpi-item:nth-child(3)::before { background: #14532d; }
-    .exp-kpi--fin .exp-kpi-val { color: #16a34a; font-size: 1.5rem; }
-    @media (max-width: 600px) { .exp-kpi--fin { grid-template-columns: repeat(3,1fr); } }
+    .exp-kpi-fin-header { font-size: .62rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-top: 1.6rem; margin-bottom: .5rem; }
+    .exp-kpi--impact { grid-template-columns: repeat(3,1fr); margin-top: 0; }
+    .exp-kpi--impact .exp-kpi-item:nth-child(1)::before { background: #16a34a; }
+    .exp-kpi--impact .exp-kpi-item:nth-child(2)::before { background: #15803d; }
+    .exp-kpi--impact .exp-kpi-item:nth-child(3)::before { background: #14532d; }
+    .exp-kpi--impact .exp-kpi-val { color: #16a34a; font-size: 1.5rem; }
+    @media (max-width: 600px) { .exp-kpi--impact { grid-template-columns: repeat(3,1fr); } }
     .exp-kpi--mdm { grid-template-columns: repeat(3,1fr); margin-top: 0; }
     .exp-kpi--mdm .exp-kpi-item:nth-child(1)::before { background: var(--accent); }
     .exp-kpi--mdm .exp-kpi-item:nth-child(2)::before { background: var(--accent2); }
@@ -158,6 +176,7 @@
     .product-brand em { font-style: italic; color: var(--accent2); }
     .product-desc { font-size: .95rem; line-height: 1.9; color: rgba(255,255,255,.55); margin-bottom: 2rem; }
     .product-desc strong { color: rgba(255,255,255,.85); font-weight: 500; }
+    .product-badge { display: inline-block; font-size: .58rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,.35); padding: .3rem .8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .product-right { display: flex; flex-direction: column; gap: 1.2rem; }
     .product-feat { padding: 1.4rem 1.6rem; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 6px; transition: background .2s, border-color .2s; }
     .product-feat:hover { background: rgba(255,255,255,.07); border-color: rgba(74,111,165,.4); }
@@ -211,7 +230,7 @@
     .ai-num-val { font-family: "DM Serif Display",serif; font-size: 2.2rem; color: var(--gold); display: block; line-height: 1; }
     .ai-num-label { font-size: .63rem; color: rgba(255,255,255,.45); letter-spacing: .04em; display: block; margin-top: .5rem; line-height: 1.6; }
 
-    /* REVEAL */
+    /* sem hero-float no v2 — números já constam em #impact abaixo */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.left { transform: translateX(-24px); }
     .reveal.right { transform: translateX(24px); }
@@ -225,24 +244,25 @@
       .hero-main { flex-direction: column; text-align: center; padding-top: 120px; gap: 3rem; }
       .hero-left { order: 2; } .hero-right { order: 1; }
       .hero-desc { margin: 0 auto 2.5rem; } .hero-cta { justify-content: center; }
-      .hero-float { display: none; }
       .hero-photo-wrap { width: 200px; height: 240px; margin: 0 auto; }
-      .numbers-grid { grid-template-columns: repeat(3,1fr); gap: 1rem; }
+      .numbers-grid { grid-template-columns: repeat(2,1fr); gap: 1rem; }
       .num-item { border-left: none; padding: 1rem; }
+      .lead-layout { grid-template-columns: 1fr; gap: 3rem; }
       .about-layout { grid-template-columns: 1fr; gap: 3rem; }
       .about-photo-wrap { max-width: 320px; }
+      .about-pillars { grid-template-columns: repeat(2,1fr); }
       .exp-layout { grid-template-columns: 1fr; gap: 3rem; }
       .exp-sticky { position: static; }
       .product-layout { grid-template-columns: 1fr; gap: 3rem; }
       .skills-layout { grid-template-columns: 1fr 1fr; }
       .ai-cards { grid-template-columns: 1fr; }
-      .ai-sig-grid { grid-template-columns: 1fr 1fr; }
       .ai-numbers { grid-template-columns: 1fr; padding: 2rem; }
       .ai-num-item { border-left: none; padding: 1rem 0; border-top: 1px solid rgba(255,255,255,.08); }
       .ai-num-item:first-child { border-top: none; }
     }
     @media (max-width: 600px) {
       .nav-links { display: none; }
+      .hamburger { display: flex; }
       .section { padding: 4rem 0; }
       .numbers-grid { grid-template-columns: repeat(2,1fr); }
       .about-pillars { grid-template-columns: 1fr; }
@@ -259,9 +279,11 @@
     <div class="nav-links">
       <a href="#about" data-i18n="nav_about">Sobre</a>
       <a href="#experience" data-i18n="nav_exp">Experiência</a>
+      <a href="#impact" data-i18n="nav_impact">Impacto</a>
+      <a href="#leadership" data-i18n="nav_leadership">Liderança</a>
       <a href="#product" data-i18n="nav_project">Projetos</a>
-      <a href="#skills" data-i18n="nav_skills">Skills</a>
       <a href="#ai" data-i18n="nav_ai">IA</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
     </div>
     <div class="nav-right">
       <button class="lang-btn active" id="btn-pt" onclick="setLang('pt')" title="Português">
@@ -284,46 +306,46 @@
           <path d="M10,0 V14 M0,7 H20" stroke="#C8102E" stroke-width="2.4"/>
         </svg>
       </button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="#about"      onclick="toggleMenu()" data-i18n="nav_about">Sobre</a>
+  <a href="#experience" onclick="toggleMenu()" data-i18n="nav_exp">Experiência</a>
+  <a href="#impact"     onclick="toggleMenu()" data-i18n="nav_impact">Impacto</a>
+  <a href="#leadership" onclick="toggleMenu()" data-i18n="nav_leadership">Liderança</a>
+  <a href="#product"    onclick="toggleMenu()" data-i18n="nav_project">Projetos</a>
+  <a href="#ai"         onclick="toggleMenu()" data-i18n="nav_ai">IA</a>
+  <a href="#skills"     onclick="toggleMenu()" data-i18n="nav_skills">Skills</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-main">
     <div class="hero-left">
-      <div class="hero-eyebrow" data-i18n="hero_eyebrow">Engenharia · Produto · Dados</div>
+      <div class="hero-eyebrow" data-i18n="hero_eyebrow">Executivo de Engenharia</div>
       <h1 class="hero-name">Rodrigo <em>Matos</em><br>Silva</h1>
       <p class="hero-tagline">
-        <span data-i18n="ht1">Engenharia</span> &thinsp;·&thinsp;
-        <span data-i18n="ht2">Produto</span> &thinsp;·&thinsp;
-        <span data-i18n="ht3">Dados</span>
+        <span data-i18n="ht1">Tecnologia</span> &thinsp;·&thinsp;
+        <span data-i18n="ht2">Pessoas</span> &thinsp;·&thinsp;
+        <span data-i18n="ht3">Negócio</span>
       </p>
       <p class="hero-desc" data-i18n="hero_desc">
-        <strong>20 anos</strong> na interseção de sistemas, times e negócio. Hoje no <strong>Grupo Casas Bahia</strong> — pagamentos, marketplace, antifraude, CDC (Carnê · FIDIC) e toda a cadeia comercial: frete, catálogo, preço, oferta e promoções.
+        <strong>20+ anos</strong> transformando tecnologia em escala, eficiência e impacto de negócio.<br><br>
+        Atualmente no <strong>Grupo Casas Bahia</strong>, liderando organizações de engenharia e plataformas críticas que conectam tecnologia, produto, dados e negócio.
       </p>
       <div class="hero-cta">
         <a class="btn-primary" href="#experience" data-i18n="cta_work">Ver Trajetória</a>
-        <a class="btn-ghost" href="mailto:silvars@gmail.com" data-i18n="cta_contact">Falar comigo</a>
+        <a class="btn-ghost" href="https://www.linkedin.com/in/silvars/" target="_blank" rel="noopener" data-i18n="cta_contact">Conectar no LinkedIn</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="hero-photo-wrap">
         <img class="hero-photo" src="assets/foto_perfil.jpg" alt="Rodrigo Matos Silva">
-      </div>
-      <div class="hero-float">
-        <div class="hero-float-item">
-          <span class="hero-float-val">170+</span>
-          <span class="hero-float-lbl" data-i18n="hf1">engenheiros</span>
-        </div>
-        <div class="hero-float-item">
-          <span class="hero-float-val">25+</span>
-          <span class="hero-float-lbl" data-i18n="hf2">squads</span>
-        </div>
-        <div class="hero-float-item">
-          <span class="hero-float-val">−R$2M</span>
-          <span class="hero-float-lbl" data-i18n="hf3">mês/custo</span>
-        </div>
       </div>
     </div>
   </div>
@@ -356,7 +378,7 @@
 </section>
 
 <!-- NUMBERS BAND -->
-<div class="numbers-band">
+<div class="numbers-band" id="impact">
   <div class="container">
     <div class="numbers-grid">
       <div class="num-item reveal reveal-d1">
@@ -375,20 +397,46 @@
         <span class="num-val accent">−R$2M</span>
         <span class="num-label" data-i18n="nb4">por mês em custo<br>operacional cortado</span>
       </div>
-      <div class="num-item reveal reveal-d5">
-        <span class="num-val" data-i18n="nb5val">até 5×</span>
-        <span class="num-label" data-i18n="nb5">ganho em<br>segmentação</span>
-      </div>
-      <div class="num-item reveal reveal-d5">
-        <span class="num-val">0→1</span>
-        <span class="num-label" data-i18n="nb6">produto lançado<br>do zero</span>
-      </div>
     </div>
   </div>
 </div>
 
+<!-- LEADERSHIP PHILOSOPHY -->
+<section class="section" id="leadership">
+  <div class="container">
+    <div class="lead-layout">
+      <div class="reveal left">
+        <div class="sec-eyebrow" data-i18n="lead_eyebrow">Filosofia de Liderança</div>
+        <h2 class="sec-title" data-i18n="lead_title">Liderança com clareza,<br>autonomia e responsabilidade</h2>
+        <div class="lead-body reveal reveal-d2" data-i18n="lead_body">
+          <p>Acredito que organizações de engenharia fortes são construídas com clareza de direção, autonomia na execução e responsabilidade pelos resultados.</p>
+          <p>Meu papel como líder não é ter todas as respostas. É criar o ambiente para que as pessoas certas encontrem as melhores respostas — mantendo tecnologia conectada aos resultados do negócio.</p>
+        </div>
+      </div>
+      <div class="lead-principles reveal right reveal-d2">
+        <div class="lead-principle">
+          <span class="lead-principle-label" data-i18n="lp1l">Clareza</span>
+          <span class="lead-principle-text" data-i18n="lp1t">Direção precisa, expectativas explícitas e contexto de negócio compartilhado com toda a organização.</span>
+        </div>
+        <div class="lead-principle">
+          <span class="lead-principle-label" data-i18n="lp2l">Autonomia</span>
+          <span class="lead-principle-text" data-i18n="lp2t">Times com ownership real das suas decisões técnicas e de produto — apoiados, não controlados.</span>
+        </div>
+        <div class="lead-principle">
+          <span class="lead-principle-label" data-i18n="lp3l">Responsabilidade</span>
+          <span class="lead-principle-text" data-i18n="lp3t">Resultados mensuráveis, não atividades. Engenharia que gera impacto de negócio — não apenas software entregue.</span>
+        </div>
+        <div class="lead-principle">
+          <span class="lead-principle-label" data-i18n="lp4l">Pessoas</span>
+          <span class="lead-principle-text" data-i18n="lp4t">Desenvolvimento individual, cultura de feedback e ambientes onde as melhores ideias vencam — independente de cargo.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SOBRE -->
-<section class="section" id="about">
+<section class="section section-alt" id="about">
   <div class="container">
     <div class="about-layout">
       <div class="about-left reveal left">
@@ -400,22 +448,27 @@
         <div class="sec-eyebrow reveal" data-i18n="about_eyebrow">Sobre mim</div>
         <h2 class="sec-title reveal" data-i18n="about_title">Do código à<br>decisão estratégica</h2>
         <div class="about-body reveal reveal-d2" data-i18n="about_body">
-          <p>Trabalho com software desde 2003. Comecei escrevendo código, passei por arquitetura de sistemas e cheguei à liderança de engenharia — <strong>não por cargo</strong>, mas porque percebi que o problema mais difícil nunca foi técnico. Era humano.</p>
-          <p>Por seis anos fui professor universitário em paralelo à carreira de engenheiro. Isso mudou como me comunico, como explico decisões, como construo consenso. Hoje lidero times grandes <em>sem abrir mão</em> de entender o que está rodando em produção.</p>
-          <p>Meu trabalho está na <strong>interseção de três disciplinas</strong>: engenharia que escala, produto que converte e dados que orientam. Não é especialização — é onde o valor de negócio realmente acontece.</p>
+          <p>Trabalho com tecnologia desde 2003. Comecei escrevendo código, passei por arquitetura de sistemas e cheguei à liderança de engenharia — não apenas por evolução de cargo, mas porque percebi que os problemas mais difíceis raramente são apenas técnicos.</p>
+          <p>São problemas de pessoas, organização, estratégia e execução.</p>
+          <p>Por seis anos fui professor universitário em paralelo à carreira de engenheiro. A experiência mudou minha forma de comunicar ideias complexas, desenvolver pessoas e construir consenso.</p>
+          <p>Hoje lidero organizações de engenharia em ambientes de alta complexidade, conectando tecnologia, produto, dados e negócio. Meu trabalho está na interseção entre <strong>engenharia que escala, produtos que geram valor e dados que orientam decisões</strong>.</p>
         </div>
         <div class="about-pillars reveal reveal-d3">
           <div class="pillar">
-            <div class="pillar-title" data-i18n="p1t">Engenharia</div>
-            <div class="pillar-text" data-i18n="p1b">Arquitetura distribuída, alta disponibilidade, times de alta performance.</div>
+            <div class="pillar-title" data-i18n="p1t">Engineering</div>
+            <div class="pillar-text" data-i18n="p1b">Arquitetura distribuída, plataformas críticas, alta disponibilidade e organizações de engenharia em escala.</div>
           </div>
           <div class="pillar">
-            <div class="pillar-title" data-i18n="p2t">Produto</div>
-            <div class="pillar-text" data-i18n="p2b">Da visão ao roadmap. Construí produto do zero, do MVP ao lançamento.</div>
+            <div class="pillar-title" data-i18n="p2t">Product</div>
+            <div class="pillar-text" data-i18n="p2b">Da estratégia ao roadmap. Construção de produtos digitais, discovery, execução e lançamento.</div>
           </div>
           <div class="pillar">
-            <div class="pillar-title" data-i18n="p3t">Dados</div>
-            <div class="pillar-text" data-i18n="p3b">Segmentação, analytics e decisões orientadas por métricas de negócio.</div>
+            <div class="pillar-title" data-i18n="p3t">Data</div>
+            <div class="pillar-text" data-i18n="p3b">Dados, analytics, segmentação, MDM, Customer 360 e decisões orientadas por métricas de negócio.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-title" data-i18n="p4t">Leadership</div>
+            <div class="pillar-text" data-i18n="p4b">People management, organizational design, estratégia, cultura, alinhamento e execução com impacto.</div>
           </div>
         </div>
       </div>
@@ -424,13 +477,13 @@
 </section>
 
 <!-- EXPERIÊNCIA -->
-<section class="section section-alt" id="experience">
+<section class="section" id="experience">
   <div class="container">
     <div class="exp-layout">
       <div class="exp-sticky">
         <div class="sec-eyebrow reveal" data-i18n="exp_eyebrow">Trajetória</div>
         <h2 class="sec-title reveal" data-i18n="exp_title">20 anos<br>de construção</h2>
-        <p class="sec-sub reveal reveal-d2" data-i18n="exp_sub">De arquiteto a executive manager — cada passo com maior escopo, times maiores e problemas mais complexos.</p>
+        <p class="sec-sub reveal reveal-d2" data-i18n="exp_sub">De arquiteto de software a executive manager — cada passo com maior escopo, times maiores e problemas mais complexos.</p>
       </div>
       <div class="exp-list">
 
@@ -442,7 +495,7 @@
             </div>
             <div class="exp-date">Jul 2022 — <span data-i18n="present">Atual</span></div>
           </div>
-          <p class="exp-desc" data-i18n="gcb_desc">5 tribos, 25 squads, 170+ engenheiros. Responsável por pagamentos, marketplace, antifraude, serviços financeiros, crédito ao consumidor e seguros &amp; serviços. Construí a governança técnica que conecta lojas físicas, e-commerce e B2B numa arquitetura distribuída de alta disponibilidade.</p>
+          <p class="exp-desc" data-i18n="gcb_desc">Liderando 170+ engenheiros em 5 tribos e 25+ squads, responsável por plataformas críticas que abrangem pagamentos, marketplace, antifraude, serviços financeiros, crédito ao consumidor, seguros e todo o ecossistema comercial.</p>
           <div class="exp-kpi">
             <div class="exp-kpi-item">
               <span class="exp-kpi-val">170+</span>
@@ -461,11 +514,11 @@
               <span class="exp-kpi-label" data-i18n="gcb_k4">anos no<br>cargo</span>
             </div>
           </div>
-          <div class="exp-kpi-fin-header" data-i18n="gcb_fin_header">S&amp;S · Impacto Financeiro — Descomissionamento Mainframe</div>
-          <div class="exp-kpi exp-kpi--fin">
+          <div class="exp-kpi-fin-header" data-i18n="gcb_impact_header">Impacto Selecionado</div>
+          <div class="exp-kpi exp-kpi--impact">
             <div class="exp-kpi-item">
               <span class="exp-kpi-val">R$ 310k</span>
-              <span class="exp-kpi-label" data-i18n="gcb_f1">economia/mês<br>projetada</span>
+              <span class="exp-kpi-label" data-i18n="gcb_f1">economia/mês<br>modernização legado</span>
             </div>
             <div class="exp-kpi-item">
               <span class="exp-kpi-val">+302%</span>
@@ -476,24 +529,26 @@
               <span class="exp-kpi-label" data-i18n="gcb_f3">payback<br>do investimento</span>
             </div>
           </div>
-          <div class="exp-kpi-fin-header" data-i18n="gcb_mdm_header">MDM · Plataforma Corporativa de Cliente — Customer 360</div>
-          <div class="exp-kpi exp-kpi--mdm">
-            <div class="exp-kpi-item">
-              <span class="exp-kpi-val">360°</span>
-              <span class="exp-kpi-label" data-i18n="gcb_m1">Customer View<br>habilitado</span>
-            </div>
+          <div class="exp-kpi exp-kpi--mdm" style="margin-top:.6rem;">
             <div class="exp-kpi-item">
               <span class="exp-kpi-val">10+</span>
-              <span class="exp-kpi-label" data-i18n="gcb_m2">domínios de<br>negócio integrados</span>
+              <span class="exp-kpi-label" data-i18n="gcb_m2">domínios integrados<br>Customer 360</span>
             </div>
             <div class="exp-kpi-item">
               <span class="exp-kpi-val">−40%</span>
               <span class="exp-kpi-label" data-i18n="gcb_m3">esforço em<br>integrações futuras</span>
             </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">360°</span>
+              <span class="exp-kpi-label" data-i18n="gcb_m1">Customer View<br>habilitado</span>
+            </div>
           </div>
           <div class="exp-tags">
-            <span class="tag">Marketplace</span><span class="tag">Payments</span><span class="tag">Anti-Fraud</span>
-            <span class="tag">Platform Engineering</span><span class="tag">AWS</span><span class="tag">Microservices</span>
+            <span class="tag">Engineering · Platforms</span>
+            <span class="tag">Payments</span>
+            <span class="tag">Data</span>
+            <span class="tag">Cloud</span>
+            <span class="tag">Transformation</span>
           </div>
         </div>
 
@@ -505,15 +560,27 @@
             </div>
             <div class="exp-date">Jun 2017 — Jul 2022</div>
           </div>
-          <p class="exp-desc" data-i18n="ame_desc">5 anos e 7 meses, três papéis com escopo crescente. Conduzi a automação de atendimento via WhatsApp e ChatBot que cortou R$2MM/mês em custo operacional. 30 engenheiros em frete, canais digitais e CRM. Responsável por segmentação de clientes — ganhos de até 5× na relevância das comunicações.</p>
-          <div class="exp-impact">
-            <div class="impact-pill"><div class="dot"></div><span data-i18n="ame_i1">−R$2MM/mês em custo</span></div>
-            <div class="impact-pill"><div class="dot"></div><span data-i18n="ame_i2">até 5× em segmentação</span></div>
-            <div class="impact-pill"><div class="dot"></div><span data-i18n="ame_i3">30 engenheiros liderados</span></div>
+          <p class="exp-desc" data-i18n="ame_desc">5 anos e 7 meses em papéis de liderança com escopo progressivamente maior. Engenharia de canais digitais, automação de atendimento e plataformas de CRM e segmentação de clientes.</p>
+          <div class="exp-kpi-fin-header" data-i18n="ame_impact_header">Impacto Selecionado</div>
+          <div class="exp-kpi exp-kpi--impact">
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">R$2M</span>
+              <span class="exp-kpi-label" data-i18n="ame_k1">redução de custo<br>operacional/mês</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">5×</span>
+              <span class="exp-kpi-label" data-i18n="ame_k2">melhoria em relevância<br>de segmentação</span>
+            </div>
+            <div class="exp-kpi-item">
+              <span class="exp-kpi-val">30</span>
+              <span class="exp-kpi-label" data-i18n="ame_k3">engenheiros<br>liderados</span>
+            </div>
           </div>
           <div class="exp-tags">
-            <span class="tag">Java</span><span class="tag">Kafka</span><span class="tag">AWS</span>
-            <span class="tag">Cassandra</span><span class="tag">Microservices</span><span class="tag">CRM</span>
+            <span class="tag">Engineering Leadership</span>
+            <span class="tag">Digital Channels</span>
+            <span class="tag">CRM</span>
+            <span class="tag">Segmentation</span>
           </div>
         </div>
 
@@ -525,16 +592,15 @@
             </div>
             <div class="exp-date">Set 2011 — Jan 2017</div>
           </div>
-          <p class="exp-desc" data-i18n="unip_desc">6 anos ensinando POO, Android, Banco de Dados e Lógica para centenas de alunos — em paralelo à carreira de engenheiro. A sala de aula ensinou o que nenhum projeto ensina: como explicar o mesmo conceito de cinco formas diferentes até a pessoa entender. Pesquisa em Data Mining.</p>
+          <p class="exp-desc" data-i18n="unip_desc">Seis anos ensinando engenharia de software, POO, banco de dados, Android e lógica para centenas de alunos — em paralelo à carreira de engenheiro. A docência moldou uma das habilidades centrais de liderança: tornar ideias complexas compreensíveis para audiências diferentes.</p>
           <blockquote class="exp-callout" data-i18n="unip_callout">"A sala de aula ensinou o que nenhum projeto ensina: como explicar o mesmo conceito de cinco formas diferentes até a pessoa entender."</blockquote>
           <div class="exp-impact">
             <div class="impact-pill"><div class="dot"></div><span data-i18n="unip_i1">6 anos de docência</span></div>
             <div class="impact-pill"><div class="dot"></div><span data-i18n="unip_i2">Centenas de alunos</span></div>
-            <div class="impact-pill"><div class="dot"></div><span data-i18n="unip_i3">Em paralelo à carreira de engenheiro</span></div>
+            <div class="impact-pill"><div class="dot"></div><span data-i18n="unip_i3">Paralelo à carreira de engenheiro</span></div>
           </div>
           <div class="exp-tags">
-            <span class="tag">Java</span><span class="tag">Android</span><span class="tag">C++</span>
-            <span class="tag">SQL</span><span class="tag">Data Mining</span>
+            <span class="tag">Software Engineering</span><span class="tag">People Development</span><span class="tag">Communication</span>
           </div>
         </div>
 
@@ -546,7 +612,7 @@
             </div>
             <div class="exp-date">Abr 2014 — Jan 2017</div>
           </div>
-          <p class="exp-desc" data-i18n="ccb_desc">Sistemas críticos de crédito, garantias e contratos em ambiente bancário regulado. Integração de plataformas legadas e modernas, modelagem de dados. Cada decisão de arquitetura tinha implicação regulatória direta.</p>
+          <p class="exp-desc" data-i18n="ccb_desc">Sistemas críticos de crédito, garantias e contratos em ambiente bancário regulado. Integração entre plataformas legadas e modernas, modelagem de dados com implicação regulatória direta em cada decisão de arquitetura.</p>
           <div class="exp-tags">
             <span class="tag">Java</span><span class="tag">Spring</span><span class="tag">WebSphere</span><span class="tag">IBM DB2</span>
           </div>
@@ -560,9 +626,9 @@
             </div>
             <div class="exp-date">Jan 2011 — Abr 2014</div>
           </div>
-          <p class="exp-desc" data-i18n="tft_desc">Consultoria de arquitetura para Volkswagen, Ford, HSBC, TAM, GOL, AstraZeneca, MSD e Valor Econômico. Troca rápida de contexto que consolidou uma visão genuinamente generalista de sistemas.</p>
+          <p class="exp-desc" data-i18n="tft_desc">Consultoria de arquitetura para Volkswagen, Ford, HSBC, TAM, GOL, AstraZeneca, MSD e Valor Econômico. A troca rápida de contexto consolidou uma visão genuinamente generalista de sistemas e negócios.</p>
           <div class="exp-tags">
-            <span class="tag">Java</span><span class="tag">.NET</span><span class="tag">Android</span>
+            <span class="tag">Architecture</span><span class="tag">Java</span><span class="tag">.NET</span><span class="tag">Android</span>
           </div>
         </div>
 
@@ -571,16 +637,17 @@
   </div>
 </section>
 
-<!-- PRODUTO -->
+<!-- PROJETOS -->
 <section class="section section-dark" id="product">
   <div class="container">
     <div class="product-layout">
       <div class="product-left">
-        <div class="sec-eyebrow reveal" style="color:var(--gold);" data-i18n="prod_eyebrow">Projetos próprios</div>
+        <div class="sec-eyebrow reveal" style="color:var(--gold);" data-i18n="geo_eyebrow">Founder · Builder</div>
         <div class="product-brand reveal">Geo<em>Alert</em></div>
+        <div class="product-badge reveal reveal-d1" data-i18n="geo_proof">Proof of Execution</div>
         <p class="product-desc reveal reveal-d2" data-i18n="geo_desc">
-          App de alertas inteligentes por geolocalização. Você define pontos de interesse e recebe notificações personalizadas quando se aproxima — <strong>sem abrir o app</strong>, rodando em segundo plano.<br><br>
-          Construído do zero: produto, arquitetura, código e distribuição. O melhor laboratório que já tive.
+          Um produto construído de forma independente — da estratégia de produto e UX até a arquitetura, engenharia e distribuição. <strong>Do zero às lojas.</strong><br><br>
+          Não apenas um projeto pessoal: uma prova de que ainda sou um builder — capaz de conceber, construir e lançar produto do início ao fim.
         </p>
         <div class="reveal reveal-d3">
           <a class="btn-primary" href="https://www.geoalert.com.br/" target="_blank" rel="noopener" data-i18n="geo_cta">Conhecer o GeoAlert ↗</a>
@@ -597,7 +664,7 @@
         </div>
         <div class="product-feat">
           <div class="product-feat-title" data-i18n="pf3t">0 → 1 completo</div>
-          <div class="product-feat-text" data-i18n="pf3b">Desde a ideia até a publicação nas lojas — produto, arquitetura, código, UX e distribuição.</div>
+          <div class="product-feat-text" data-i18n="pf3b">Produto, arquitetura, código, UX e distribuição — tudo construído e lançado de forma independente.</div>
         </div>
         <div class="product-feat">
           <div class="product-feat-title" data-i18n="pf4t">Stack moderna</div>
@@ -656,48 +723,53 @@
         <div class="skill-tags">
           <span class="skill-tag hi">People Management</span>
           <span class="skill-tag hi">Eng. Management</span>
-          <span class="skill-tag">Agile · Scrum</span>
-          <span class="skill-tag">OKRs</span>
+          <span class="skill-tag hi">Organizational Design</span>
           <span class="skill-tag">Hiring &amp; Coaching</span>
-          <span class="skill-tag">Comunicação exec.</span>
+          <span class="skill-tag">OKRs</span>
+          <span class="skill-tag">Executive Communication</span>
         </div>
       </div>
       <div class="skill-group g2 reveal reveal-d2">
         <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        <div class="skill-cat" data-i18n="sk2">Arquitetura</div>
+        <div class="skill-cat" data-i18n="sk2">Tecnologia</div>
         <div class="skill-tags">
-          <span class="skill-tag hi">Microservices</span>
           <span class="skill-tag hi">Distributed Systems</span>
+          <span class="skill-tag hi">Platform Engineering</span>
           <span class="skill-tag">Cloud · AWS · GCP</span>
-          <span class="skill-tag">Event-driven</span>
-          <span class="skill-tag">API Design</span>
+          <span class="skill-tag">Microservices</span>
+          <span class="skill-tag">Event-Driven</span>
           <span class="skill-tag">Alta disponibilidade</span>
         </div>
       </div>
       <div class="skill-group g3 reveal reveal-d3">
+        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        <div class="skill-cat" data-i18n="sk3">Data &amp; AI</div>
+        <div class="skill-tags">
+          <span class="skill-tag hi">Data Platforms</span>
+          <span class="skill-tag hi">MDM · Customer 360</span>
+          <span class="skill-tag">Analytics</span>
+          <span class="skill-tag">Segmentação</span>
+          <span class="skill-tag">AI Agents</span>
+          <span class="skill-tag">SQL · NoSQL</span>
+        </div>
+      </div>
+      <div class="skill-group g4 reveal reveal-d4">
         <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        <div class="skill-cat" data-i18n="sk3">Tecnologias</div>
+        <div class="skill-cat" data-i18n="sk4">Técnico</div>
         <div class="skill-tags">
           <span class="skill-tag hi">Java · Spring</span>
           <span class="skill-tag hi">Python</span>
           <span class="skill-tag">Kafka · Docker · K8s</span>
           <span class="skill-tag">MongoDB · Redis</span>
           <span class="skill-tag">React Native · Expo</span>
-          <span class="skill-tag">SQL · NoSQL</span>
-        </div>
-      </div>
-      <div class="skill-group g4 reveal reveal-d4">
-        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <div class="skill-cat" data-i18n="sk4">Idiomas</div>
-        <div class="skill-tags">
-          <span class="skill-tag hi">Português — nativo</span>
-          <span class="skill-tag hi">Inglês — avançado</span>
-          <span class="skill-tag">Espanhol — interm.</span>
-          <span class="skill-tag">Francês — básico</span>
         </div>
       </div>
     </div>
     <div class="certs-row reveal reveal-d3">
+      <div class="cert-badge" data-i18n="lang1">Português — nativo</div>
+      <div class="cert-badge" data-i18n="lang2">English — avançado</div>
+      <div class="cert-badge" data-i18n="lang3">Español — intermediário</div>
+      <div class="cert-badge" data-i18n="lang4">Français — básico</div>
       <div class="cert-badge">Sun Certified Programmer — Java SE 5.0</div>
       <div class="cert-badge">Scrum Fundamentals Certified</div>
       <div class="cert-badge" data-i18n="cert">Pós-graduação em Arquitetura de Software — FIAP</div>
@@ -705,50 +777,50 @@
   </div>
 </section>
 
-<!-- IA -->
+<!-- AI -->
 <section class="section section-alt" id="ai">
   <div class="container">
     <div style="text-align:center; margin-bottom: 3.5rem;">
-      <div class="sec-eyebrow reveal" style="justify-content:center;" data-i18n="ai_eyebrow">Inteligência Artificial</div>
+      <div class="sec-eyebrow reveal" style="justify-content:center;" data-i18n="ai_eyebrow">IA &amp; Tecnologia Emergente</div>
       <h2 class="sec-title reveal" style="text-align:center;" data-i18n="ai_title">IA como infraestrutura<br>de decisão</h2>
-      <p class="sec-sub reveal reveal-d2" style="text-align:center; margin: .9rem auto 0; max-width:520px;" data-i18n="ai_sub">Não uso IA como ferramenta. Uso como alavanca para gestão, produto e dados — com contexto persistente e resultado mensurável.</p>
+      <p class="sec-sub reveal reveal-d2" style="text-align:center; margin: .9rem auto 0; max-width:520px;" data-i18n="ai_sub">Exploro IA não como tecnologia isolada, mas como infraestrutura para tomada de decisão, produtividade e desenvolvimento de produto — aplicada ao trabalho real.</p>
     </div>
 
     <div class="ai-cards">
       <div class="ai-card reveal reveal-d1">
-        <div class="ai-card-num" data-i18n="ai_c1n">01 — Gestão</div>
-        <div class="ai-card-title" data-i18n="ai_c1t">Copiloto de gestão</div>
-        <div class="ai-card-body" data-i18n="ai_c1b">Estrutura 1:1, avaliações e feedbacks com IA. Consolida histórico de pessoas, identifica padrões e gaps de liderança — de forma consistente, não episódica.</div>
-        <div class="ai-card-value" data-i18n="ai_c1v">Transforma gestão em algo escalável — menos dependente de feeling.</div>
+        <div class="ai-card-num" data-i18n="ai_c1n">01 — Liderança</div>
+        <div class="ai-card-title" data-i18n="ai_c1t">IA no contexto de gestão</div>
+        <div class="ai-card-body" data-i18n="ai_c1b">Fluxos de gestão assistidos por IA: estrutura de 1:1, avaliações e feedbacks. Consolidação de histórico de pessoas, identificação de padrões e gaps — de forma consistente, não episódica.</div>
+        <div class="ai-card-value" data-i18n="ai_c1v">Gestão mais consistente e menos dependente de memória ou feeling.</div>
       </div>
       <div class="ai-card reveal reveal-d2">
         <div class="ai-card-num" data-i18n="ai_c2n">02 — Dados</div>
-        <div class="ai-card-title" data-i18n="ai_c2t">IA conectada a dados reais</div>
-        <div class="ai-card-body" data-i18n="ai_c2b">Contexto persistente, não prompts soltos. Agentes conectados a bases reais (MongoDB, CRM) para suporte à decisão no core do negócio — leitura de clientes, análise de padrões, suporte operacional.</div>
-        <div class="ai-card-value" data-i18n="ai_c2v">Sai do hype → entra em IA aplicada ao core do negócio.</div>
+        <div class="ai-card-title" data-i18n="ai_c2t">Agentes conectados a dados reais</div>
+        <div class="ai-card-body" data-i18n="ai_c2b">Contexto persistente conectado a bases reais (MongoDB, CRM) para suporte à decisão no core do negócio — leitura de clientes, análise de padrões, suporte operacional.</div>
+        <div class="ai-card-value" data-i18n="ai_c2v">IA aplicada ao core do negócio — não ao hype.</div>
       </div>
       <div class="ai-card reveal reveal-d3">
         <div class="ai-card-num" data-i18n="ai_c3n">03 — Produto</div>
         <div class="ai-card-title" data-i18n="ai_c3t">IA acelerando produto</div>
-        <div class="ai-card-body" data-i18n="ai_c3b">GeoAlert construído com mentalidade enxuta e IA no loop. Copy, ideação, refinamento, store listings e potencial evolução para features inteligentes baseadas em comportamento.</div>
-        <div class="ai-card-value" data-i18n="ai_c3v">Reduz o ciclo: ideia → execução → validação.</div>
+        <div class="ai-card-body" data-i18n="ai_c3b">GeoAlert construído com IA no loop. Copy, ideação, refinamento, store listings e potencial evolução para features inteligentes baseadas em comportamento.</div>
+        <div class="ai-card-value" data-i18n="ai_c3v">Ciclo mais curto: ideia → execução → validação.</div>
       </div>
       <div class="ai-card reveal reveal-d4">
         <div class="ai-card-num" data-i18n="ai_c4n">04 — Produtividade</div>
-        <div class="ai-card-title" data-i18n="ai_c4t">Amplificador de produtividade</div>
-        <div class="ai-card-body" data-i18n="ai_c4b">Escreve melhor, estrutura pensamento mais rápido, reduz tarefas operacionais. Cria fluxos semi-automatizados de análise e comunicação que ampliam o output individual.</div>
+        <div class="ai-card-title" data-i18n="ai_c4t">Fluxos semi-automatizados</div>
+        <div class="ai-card-body" data-i18n="ai_c4b">Análise estruturada mais rápida, redução de tarefas operacionais, comunicação amplificada. Fluxos semi-automatizados que aumentam o output individual sem aumentar o esforço proporcional.</div>
         <div class="ai-card-value" data-i18n="ai_c4v">Mais output com o mesmo input — entrega acima da média.</div>
       </div>
     </div>
 
     <div class="ai-numbers reveal reveal-d2">
       <div class="ai-num-item">
-        <span class="ai-num-val" data-i18n="ai_s1v">3–10×</span>
-        <span class="ai-num-label" data-i18n="ai_s1l">ganho em análise<br>e estruturação</span>
+        <span class="ai-num-val" data-i18n="ai_s1v">até 10×</span>
+        <span class="ai-num-label" data-i18n="ai_s1l">em fluxos selecionados<br>de análise e estruturação</span>
       </div>
       <div class="ai-num-item">
-        <span class="ai-num-val" data-i18n="ai_s2v">−50%</span>
-        <span class="ai-num-label" data-i18n="ai_s2l">tempo de criação<br>de docs estratégicos</span>
+        <span class="ai-num-val" data-i18n="ai_s2v">até −50%</span>
+        <span class="ai-num-label" data-i18n="ai_s2l">de tempo em criação<br>de docs estratégicos selecionados</span>
       </div>
       <div class="ai-num-item">
         <span class="ai-num-val" data-i18n="ai_s3v">0→∞</span>
@@ -764,7 +836,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-name">Rodrigo Matos Silva</div>
-      <div class="footer-tag" data-i18n="footer_tag">Engenharia · Produto · Dados</div>
+      <div class="footer-tag" data-i18n="footer_tag">Executivo de Engenharia · Tecnologia · Pessoas · Negócio</div>
       <div class="footer-copy">© <span id="year"></span> · rodrigomatos.tech</div>
     </div>
     <div class="footer-links">
@@ -781,46 +853,55 @@
 <script>
 const i18n = {
   pt: {
-    hero_eyebrow:"Engenharia · Produto · Dados", ht1:"Engenharia", ht2:"Produto", ht3:"Dados",
-    hero_desc:"<strong>20 anos</strong> na interseção de sistemas, times e negócio. Hoje no <strong>Grupo Casas Bahia</strong> — pagamentos, marketplace, antifraude, CDC (Carnê · FIDIC) e toda a cadeia comercial: frete, catálogo, preço, oferta e promoções.",
-    cta_work:"Ver Trajetória", cta_contact:"Falar comigo",
-    hf1:"engenheiros", hf2:"squads", hf3:"mês/custo", scroll:"scroll",
-    nav_about:"Sobre", nav_exp:"Experiência", nav_project:"Projetos", nav_skills:"Skills",
-    nb1:"anos em<br>tecnologia", nb2:"engenheiros<br>liderados", nb3:"squads<br>estruturados",
-    nb4:"por mês em custo<br>operacional cortado", nb5val:"até 5×", nb5:"ganho em<br>segmentação", nb6:"produto lançado<br>do zero",
+    hero_eyebrow:"Executivo de Engenharia",
+    ht1:"Tecnologia", ht2:"Pessoas", ht3:"Negócio",
+    hero_desc:"<strong>20+ anos</strong> transformando tecnologia em escala, eficiência e impacto de negócio.<br><br>Atualmente no <strong>Grupo Casas Bahia</strong>, liderando organizações de engenharia e plataformas críticas que conectam tecnologia, produto, dados e negócio.",
+    cta_work:"Ver Trajetória", cta_contact:"Conectar no LinkedIn",
+    hf1:"engenheiros liderados", hf2:"squads", hf3:"redução de custo/mês", scroll:"scroll",
+    nav_about:"Sobre", nav_exp:"Experiência", nav_impact:"Impacto", nav_leadership:"Liderança",
+    nav_project:"Projetos", nav_skills:"Skills", nav_ai:"IA",
+    nb1:"anos em<br>tecnologia", nb2:"engenheiros<br>liderados", nb3:"squads<br>estruturados", nb4:"por mês em custo<br>operacional cortado",
+    lead_eyebrow:"Filosofia de Liderança",
+    lead_title:"Liderança com clareza,<br>autonomia e responsabilidade",
+    lead_body:"<p>Acredito que organizações de engenharia fortes são construídas com clareza de direção, autonomia na execução e responsabilidade pelos resultados.</p><p>Meu papel como líder não é ter todas as respostas. É criar o ambiente para que as pessoas certas encontrem as melhores respostas — mantendo tecnologia conectada aos resultados do negócio.</p>",
+    lp1l:"Clareza", lp1t:"Direção precisa, expectativas explícitas e contexto de negócio compartilhado com toda a organização.",
+    lp2l:"Autonomia", lp2t:"Times com ownership real das suas decisões técnicas e de produto — apoiados, não controlados.",
+    lp3l:"Responsabilidade", lp3t:"Resultados mensuráveis, não atividades. Engenharia que gera impacto de negócio — não apenas software entregue.",
+    lp4l:"Pessoas", lp4t:"Desenvolvimento individual, cultura de feedback e ambientes onde as melhores ideias vençam — independente de cargo.",
     about_eyebrow:"Sobre mim", about_title:"Do código à<br>decisão estratégica",
-    about_body:"<p>Trabalho com software desde 2003. Comecei escrevendo código, passei por arquitetura de sistemas e cheguei à liderança de engenharia — <strong>não por cargo</strong>, mas porque percebi que o problema mais difícil nunca foi técnico. Era humano.</p><p>Por seis anos fui professor universitário em paralelo à carreira de engenheiro. Isso mudou como me comunico, como explico decisões, como construo consenso. Hoje lidero times grandes <em>sem abrir mão</em> de entender o que está rodando em produção.</p><p>Meu trabalho está na <strong>interseção de três disciplinas</strong>: engenharia que escala, produto que converte e dados que orientam. Não é especialização — é onde o valor de negócio realmente acontece.</p>",
-    p1t:"Engenharia", p1b:"Arquitetura distribuída, alta disponibilidade, times de alta performance.",
-    p2t:"Produto", p2b:"Da visão ao roadmap. Construí produto do zero, do MVP ao lançamento.",
-    p3t:"Dados", p3b:"Segmentação, analytics e decisões orientadas por métricas de negócio.",
+    about_body:"<p>Trabalho com tecnologia desde 2003. Comecei escrevendo código, passei por arquitetura de sistemas e cheguei à liderança de engenharia — não apenas por evolução de cargo, mas porque percebi que os problemas mais difíceis raramente são apenas técnicos.</p><p>São problemas de pessoas, organização, estratégia e execução.</p><p>Por seis anos fui professor universitário em paralelo à carreira de engenheiro. A experiência mudou minha forma de comunicar ideias complexas, desenvolver pessoas e construir consenso.</p><p>Hoje lidero organizações de engenharia em ambientes de alta complexidade, conectando tecnologia, produto, dados e negócio. Meu trabalho está na interseção entre <strong>engenharia que escala, produtos que geram valor e dados que orientam decisões</strong>.</p>",
+    p1t:"Engenharia", p1b:"Arquitetura distribuída, plataformas críticas, alta disponibilidade e organizações de engenharia em escala.",
+    p2t:"Produto", p2b:"Da estratégia ao roadmap. Construção de produtos digitais, discovery, execução e lançamento.",
+    p3t:"Dados", p3b:"Dados, analytics, segmentação, MDM, Customer 360 e decisões orientadas por métricas de negócio.",
+    p4t:"Liderança", p4b:"People management, organizational design, estratégia, cultura, alinhamento e execução com impacto.",
     exp_eyebrow:"Trajetória", exp_title:"20 anos<br>de construção",
-    exp_sub:"De arquiteto a executive manager — cada passo com maior escopo, times maiores e problemas mais complexos.",
+    exp_sub:"De arquiteto de software a executive manager — cada passo com maior escopo, times maiores e problemas mais complexos.",
     present:"Atual",
     gcb_role:"Software Engineering Executive Manager",
-    gcb_desc:"5 tribos, 25 squads, 170+ engenheiros. Responsável por pagamentos, marketplace, antifraude, serviços financeiros, crédito ao consumidor e seguros &amp; serviços. Construí a governança técnica que conecta lojas físicas, e-commerce e B2B numa arquitetura distribuída de alta disponibilidade.",
-    gcb_i1:"170+ engenheiros gerenciados", gcb_i2:"5 tribos · 25 squads", gcb_i3:"Pagamentos + Antifraude",
+    gcb_desc:"Liderando 170+ engenheiros em 5 tribos e 25+ squads, responsável por plataformas críticas que abrangem pagamentos, marketplace, antifraude, serviços financeiros, crédito ao consumidor, seguros e todo o ecossistema comercial.",
     gcb_k1:"engenheiros<br>liderados", gcb_k2:"squads<br>estruturados", gcb_k3:"tribos de<br>produto", gcb_k4:"anos no<br>cargo",
-    gcb_fin_header:"S&amp;S · Impacto Financeiro — Descomissionamento Mainframe",
-    gcb_f1:"economia/mês<br>projetada", gcb_f2:"ROI<br>em 5 anos", gcb_f3:"payback<br>do investimento",
-    gcb_mdm_header:"MDM · Plataforma Corporativa de Cliente — Customer 360",
-    gcb_m1:"Customer View<br>habilitado", gcb_m2:"domínios de<br>negócio integrados", gcb_m3:"esforço em<br>integrações futuras",
+    gcb_impact_header:"Impacto Selecionado",
+    gcb_f1:"economia/mês<br>modernização legado", gcb_f2:"ROI<br>em 5 anos", gcb_f3:"payback<br>do investimento",
+    gcb_m1:"Customer View<br>habilitado", gcb_m2:"domínios integrados<br>Customer 360", gcb_m3:"esforço em<br>integrações futuras",
     ame_role:"Engineering Manager · Tech Manager · Tech Lead",
-    ame_desc:"5 anos e 7 meses, três papéis com escopo crescente. Conduzi a automação de atendimento via WhatsApp e ChatBot que cortou R$2MM/mês em custo operacional. 30 engenheiros em frete, canais digitais e CRM. Responsável por segmentação de clientes — ganhos de até 5× na relevância das comunicações.",
-    ame_i1:"−R$2MM/mês em custo", ame_i2:"até 5× em segmentação", ame_i3:"30 engenheiros liderados",
+    ame_desc:"5 anos e 7 meses em papéis de liderança com escopo progressivamente maior. Engenharia de canais digitais, automação de atendimento e plataformas de CRM e segmentação de clientes.",
+    ame_impact_header:"Impacto Selecionado",
+    ame_k1:"redução de custo<br>operacional/mês", ame_k2:"melhoria em relevância<br>de segmentação", ame_k3:"engenheiros<br>liderados",
     unip_role:"Professor Universitário",
-    unip_desc:"6 anos ensinando POO, Android, Banco de Dados e Lógica para centenas de alunos — em paralelo à carreira de engenheiro. A sala de aula ensinou o que nenhum projeto ensina: como explicar o mesmo conceito de cinco formas diferentes até a pessoa entender. Pesquisa em Data Mining.",
+    unip_desc:"Seis anos ensinando engenharia de software, POO, banco de dados, Android e lógica para centenas de alunos — em paralelo à carreira de engenheiro. A docência moldou uma das habilidades centrais de liderança: tornar ideias complexas compreensíveis para audiências diferentes.",
     unip_callout:"\"A sala de aula ensinou o que nenhum projeto ensina: como explicar o mesmo conceito de cinco formas diferentes até a pessoa entender.\"",
-    unip_i1:"6 anos de docência", unip_i2:"Centenas de alunos", unip_i3:"Em paralelo à carreira de engenheiro",
+    unip_i1:"6 anos de docência", unip_i2:"Centenas de alunos", unip_i3:"Paralelo à carreira de engenheiro",
     ccb_role:"Analista Sênior / Especialista",
-    ccb_desc:"Sistemas críticos de crédito, garantias e contratos em ambiente bancário regulado. Integração de plataformas legadas e modernas, modelagem de dados. Cada decisão de arquitetura tinha implicação regulatória direta.",
+    ccb_desc:"Sistemas críticos de crédito, garantias e contratos em ambiente bancário regulado. Integração entre plataformas legadas e modernas, modelagem de dados com implicação regulatória direta em cada decisão de arquitetura.",
     tft_role:"Arquiteto de Software",
-    tft_desc:"Consultoria de arquitetura para Volkswagen, Ford, HSBC, TAM, GOL, AstraZeneca, MSD e Valor Econômico. Troca rápida de contexto que consolidou uma visão genuinamente generalista de sistemas.",
-    prod_eyebrow:"Projetos próprios",
-    geo_desc:"App de alertas inteligentes por geolocalização. Você define pontos de interesse e recebe notificações personalizadas quando se aproxima — <strong>sem abrir o app</strong>, rodando em segundo plano.<br><br>Construído do zero: produto, arquitetura, código e distribuição. O melhor laboratório que já tive.",
+    tft_desc:"Consultoria de arquitetura para Volkswagen, Ford, HSBC, TAM, GOL, AstraZeneca, MSD e Valor Econômico. A troca rápida de contexto consolidou uma visão genuinamente generalista de sistemas e negócios.",
+    geo_eyebrow:"Founder · Builder",
+    geo_proof:"Proof of Execution",
+    geo_desc:"Um produto construído de forma independente — da estratégia de produto e UX até a arquitetura, engenharia e distribuição. <strong>Do zero às lojas.</strong><br><br>Não apenas um projeto pessoal: uma prova de que ainda sou um builder — capaz de conceber, construir e lançar produto do início ao fim.",
     geo_cta:"Conhecer o GeoAlert ↗",
     pf1t:"Geolocalização inteligente", pf1b:"Alertas baseados em proximidade geográfica, sem consumo excessivo de bateria.",
     pf2t:"Background nativo", pf2b:"Notificações funcionam mesmo com o app fechado, usando APIs nativas iOS e Android.",
-    pf3t:"0 → 1 completo", pf3b:"Desde a ideia até a publicação nas lojas — produto, arquitetura, código, UX e distribuição.",
+    pf3t:"0 → 1 completo", pf3b:"Produto, arquitetura, código, UX e distribuição — tudo construído e lançado de forma independente.",
     pf4t:"Stack moderna", pf4b:"React Native + Expo, backend cloud, CI/CD automatizado. Arquitetura mobile-first.",
     ticker_eyebrow:"Open source",
     ticker_desc:"Extensão do Chrome para acompanhar ações da B3 direto no ícone do navegador. Configure alertas de preço e o ícone muda de cor conforme a variação do dia — <strong>em segundo plano</strong>, sem abrir nada.<br><br>Construído do zero em JavaScript puro. Open source no GitHub.",
@@ -830,69 +911,78 @@ const i18n = {
     tf3t:"Busca inteligente", tf3b:"Aceita ticker (PETR4, VALE3) ou nome da empresa. Foco total na B3.",
     tf4t:"Rotação automática", tf4b:"Alterna entre ativos cadastrados a cada minuto. Ou fixe um como padrão no ícone.",
     sk_eyebrow:"Competências", sk_title:"O que eu domino",
-    sk1:"Liderança &amp; Gestão", sk2:"Arquitetura", sk3:"Tecnologias", sk4:"Idiomas",
+    sk1:"Liderança &amp; Gestão", sk2:"Tecnologia", sk3:"Dados &amp; IA", sk4:"Técnico",
+    lang1:"Português — nativo", lang2:"English — avançado", lang3:"Español — intermediário", lang4:"Français — básico",
     cert:"Pós-graduação em Arquitetura de Software — FIAP",
-    nav_ai:"IA",
-    ai_eyebrow:"Inteligência Artificial", ai_title:"IA como infraestrutura<br>de decisão",
-    ai_sub:"Não uso IA como ferramenta. Uso como alavanca para gestão, produto e dados — com contexto persistente e resultado mensurável.",
-    ai_c1n:"01 — Gestão", ai_c1t:"Copiloto de gestão",
-    ai_c1b:"Estrutura 1:1, avaliações e feedbacks com IA. Consolida histórico de pessoas, identifica padrões e gaps de liderança — de forma consistente, não episódica.",
-    ai_c1v:"Transforma gestão em algo escalável — menos dependente de feeling.",
-    ai_c2n:"02 — Dados", ai_c2t:"IA conectada a dados reais",
-    ai_c2b:"Contexto persistente, não prompts soltos. Agentes conectados a bases reais (MongoDB, CRM) para suporte à decisão no core do negócio — leitura de clientes, análise de padrões, suporte operacional.",
-    ai_c2v:"Sai do hype → entra em IA aplicada ao core do negócio.",
+    ai_eyebrow:"IA &amp; Tecnologia Emergente", ai_title:"IA como infraestrutura<br>de decisão",
+    ai_sub:"Exploro IA não como tecnologia isolada, mas como infraestrutura para tomada de decisão, produtividade e desenvolvimento de produto — aplicada ao trabalho real.",
+    ai_c1n:"01 — Liderança", ai_c1t:"IA no contexto de gestão",
+    ai_c1b:"Fluxos de gestão assistidos por IA: estrutura de 1:1, avaliações e feedbacks. Consolidação de histórico de pessoas, identificação de padrões e gaps — de forma consistente, não episódica.",
+    ai_c1v:"Gestão mais consistente e menos dependente de memória ou feeling.",
+    ai_c2n:"02 — Dados", ai_c2t:"Agentes conectados a dados reais",
+    ai_c2b:"Contexto persistente conectado a bases reais (MongoDB, CRM) para suporte à decisão no core do negócio — leitura de clientes, análise de padrões, suporte operacional.",
+    ai_c2v:"IA aplicada ao core do negócio — não ao hype.",
     ai_c3n:"03 — Produto", ai_c3t:"IA acelerando produto",
-    ai_c3b:"GeoAlert construído com mentalidade enxuta e IA no loop. Copy, ideação, refinamento, store listings e potencial evolução para features inteligentes baseadas em comportamento.",
-    ai_c3v:"Reduz o ciclo: ideia → execução → validação.",
-    ai_c4n:"04 — Produtividade", ai_c4t:"Amplificador de produtividade",
-    ai_c4b:"Escreve melhor, estrutura pensamento mais rápido, reduz tarefas operacionais. Cria fluxos semi-automatizados de análise e comunicação que ampliam o output individual.",
+    ai_c3b:"GeoAlert construído com IA no loop. Copy, ideação, refinamento, store listings e potencial evolução para features inteligentes baseadas em comportamento.",
+    ai_c3v:"Ciclo mais curto: ideia → execução → validação.",
+    ai_c4n:"04 — Produtividade", ai_c4t:"Fluxos semi-automatizados",
+    ai_c4b:"Análise estruturada mais rápida, redução de tarefas operacionais, comunicação amplificada. Fluxos semi-automatizados que aumentam o output individual sem aumentar o esforço proporcional.",
     ai_c4v:"Mais output com o mesmo input — entrega acima da média.",
-    ai_s1v:"3–10×", ai_s1l:"ganho em análise<br>e estruturação",
-    ai_s2v:"−50%", ai_s2l:"tempo de criação<br>de docs estratégicos",
+    ai_s1v:"até 10×", ai_s1l:"em fluxos selecionados<br>de análise e estruturação",
+    ai_s2v:"até −50%", ai_s2l:"de tempo em criação<br>de docs estratégicos selecionados",
     ai_s3v:"0→∞", ai_s3l:"fluxos semi-automatizados<br>de gestão e análise",
-    footer_tag:"Engenharia · Produto · Dados"
+    footer_tag:"Executivo de Engenharia · Tecnologia · Pessoas · Negócio"
   },
   en: {
-    hero_eyebrow:"Engineering · Product · Data", ht1:"Engineering", ht2:"Product", ht3:"Data",
-    hero_desc:"<strong>20 years</strong> at the intersection of systems, teams, and business. Currently at <strong>Grupo Casas Bahia</strong> — payments, marketplace, anti-fraud, CDC (installment credit · FIDIC), and the full commercial stack: freight, catalog, pricing, offers, and promotions.",
-    cta_work:"See Career", cta_contact:"Get in touch",
-    hf1:"engineers", hf2:"squads", hf3:"month/cost", scroll:"scroll",
-    nav_about:"About", nav_exp:"Experience", nav_project:"Projects", nav_skills:"Skills",
-    nb1:"years in<br>technology", nb2:"engineers<br>led", nb3:"squads<br>structured",
-    nb4:"per month in operational<br>cost reduction", nb5val:"up to 5×", nb5:"customer<br>segmentation gain", nb6:"product shipped<br>from scratch",
+    hero_eyebrow:"Engineering Executive",
+    ht1:"Technology", ht2:"People", ht3:"Business",
+    hero_desc:"<strong>20+ years</strong> turning technology into scale, efficiency and business impact.<br><br>Currently at <strong>Grupo Casas Bahia</strong>, leading engineering organizations and critical platforms at the intersection of technology, product, data and business.",
+    cta_work:"View my journey", cta_contact:"Connect on LinkedIn",
+    hf1:"engineers led", hf2:"squads", hf3:"monthly cost cut", scroll:"scroll",
+    nav_about:"About", nav_exp:"Experience", nav_impact:"Impact", nav_leadership:"Leadership",
+    nav_project:"Projects", nav_skills:"Skills", nav_ai:"AI",
+    nb1:"years in<br>technology", nb2:"engineers<br>led", nb3:"squads<br>structured", nb4:"per month in<br>operational cost reduction",
+    lead_eyebrow:"Leadership Philosophy",
+    lead_title:"Leadership through clarity,<br>autonomy and accountability",
+    lead_body:"<p>I believe strong engineering organizations are built through clarity of direction, autonomy in execution and accountability for outcomes.</p><p>My role as a leader is not to have all the answers. It is to create the environment where the right people can find them — while keeping technology connected to business outcomes.</p>",
+    lp1l:"Clarity", lp1t:"Precise direction, explicit expectations and business context shared across the entire organization.",
+    lp2l:"Autonomy", lp2t:"Teams with real ownership of their technical and product decisions — supported, not controlled.",
+    lp3l:"Accountability", lp3t:"Measurable outcomes, not activities. Engineering that drives business impact — not just software shipped.",
+    lp4l:"People", lp4t:"Individual development, a feedback culture and environments where the best ideas win — regardless of seniority.",
     about_eyebrow:"About me", about_title:"From code to<br>strategic decisions",
-    about_body:"<p>I have been working with software since 2003. I started writing code, moved into systems architecture, and eventually found myself leading engineering — <strong>not because of a title</strong>, but because I realized the hardest problem was never technical. It was human.</p><p>For six years I taught at university while working as an engineer. That shaped how I communicate, how I explain decisions, how I build alignment. Today I lead large teams <em>without losing touch</em> with what is actually running in production.</p><p>My work sits at the <strong>intersection of three disciplines</strong>: engineering that scales, product that converts, and data that guides. That's not a specialization — it's where business value actually happens.</p>",
-    p1t:"Engineering", p1b:"Distributed architecture, high availability, high-performance teams.",
-    p2t:"Product", p2b:"From vision to roadmap. Built a product from scratch, MVP to launch.",
-    p3t:"Data", p3b:"Segmentation, analytics, and decisions driven by business metrics.",
+    about_body:"<p>I have been working with technology since 2003. I started writing code, moved into systems architecture and eventually led engineering organizations — not simply because of a title change, but because I realized the hardest problems are rarely purely technical.</p><p>They are problems of people, organization, strategy and execution.</p><p>For six years I taught at university while working as an engineer in parallel. That experience shaped how I communicate complex ideas, develop people and build alignment.</p><p>Today I lead engineering organizations in high-complexity environments, connecting technology, product, data and business. My work sits at the intersection of <strong>engineering that scales, products that create value and data that guides decisions</strong>.</p>",
+    p1t:"Engineering", p1b:"Distributed architecture, critical platforms, high availability and engineering organizations at scale.",
+    p2t:"Product", p2b:"From strategy to roadmap. Digital product development, discovery, execution and launch.",
+    p3t:"Data", p3b:"Data, analytics, segmentation, MDM, Customer 360 and decisions driven by business metrics.",
+    p4t:"Leadership", p4b:"People management, organizational design, strategy, culture, alignment and execution with impact.",
     exp_eyebrow:"Career", exp_title:"20 years<br>of building",
-    exp_sub:"From architect to executive manager — each step with broader scope, larger teams, and more complex problems.",
+    exp_sub:"From software architect to executive manager — each step with broader scope, larger teams and more complex problems.",
     present:"Present",
     gcb_role:"Software Engineering Executive Manager",
-    gcb_desc:"5 tribes, 25 squads, 170+ engineers. Responsible for payments, marketplace, anti-fraud, financial services, consumer credit, and insurance &amp; services. Built the technical governance connecting physical stores, e-commerce, and B2B in a high-availability distributed architecture.",
-    gcb_i1:"170+ engineers managed", gcb_i2:"5 tribes · 25 squads", gcb_i3:"Payments + Anti-Fraud",
+    gcb_desc:"Leading 170+ engineers across 5 tribes and 25+ squads, responsible for critical platforms spanning payments, marketplace, antifraud, financial services, consumer credit, insurance and the full commercial ecosystem.",
     gcb_k1:"engineers<br>led", gcb_k2:"squads<br>structured", gcb_k3:"product<br>tribes", gcb_k4:"years in<br>the role",
-    gcb_fin_header:"S&amp;S · Financial Impact — Mainframe Decommissioning",
-    gcb_f1:"projected<br>monthly savings", gcb_f2:"5-year<br>ROI", gcb_f3:"investment<br>payback",
-    gcb_mdm_header:"MDM · Corporate Customer Platform — Customer 360",
-    gcb_m1:"Customer View<br>enabled", gcb_m2:"business domains<br>integrated", gcb_m3:"reduction in<br>future integrations",
+    gcb_impact_header:"Selected Impact",
+    gcb_f1:"projected monthly savings<br>legacy modernization", gcb_f2:"5-year<br>ROI", gcb_f3:"investment<br>payback",
+    gcb_m1:"Customer View<br>enabled", gcb_m2:"business domains<br>Customer 360", gcb_m3:"reduction in<br>future integrations",
     ame_role:"Engineering Manager · Tech Manager · Tech Lead",
-    ame_desc:"5 years and 7 months across three roles with growing scope. Led customer service automation via WhatsApp and ChatBot that reduced R$2MM/month in operational costs. 30 engineers across freight, digital channels, and CRM. Led customer segmentation — up to 5× improvement in communication relevance.",
-    ame_i1:"−R$2MM/month in cost", ame_i2:"up to 5× segmentation gain", ame_i3:"30 engineers led",
+    ame_desc:"5 years and 7 months across progressively broader engineering leadership roles. Digital channel engineering, service automation and CRM and customer segmentation platforms.",
+    ame_impact_header:"Selected Impact",
+    ame_k1:"monthly operational<br>cost reduction", ame_k2:"improvement in customer<br>segmentation relevance", ame_k3:"engineers<br>led",
     unip_role:"University Professor",
-    unip_desc:"6 years teaching OOP, Android, Databases, and Logic to hundreds of students — while working as an engineer in parallel. The classroom taught something no project does: how to explain the same concept five different ways until it clicks. Research in Data Mining.",
+    unip_desc:"Six years teaching software engineering, object-oriented programming, databases, Android and logic to hundreds of students — while simultaneously working as a software engineer. Teaching shaped one of my core leadership skills: making complex ideas understandable to different audiences.",
     unip_callout:"\"The classroom taught something no project does: how to explain the same concept five different ways until it clicks.\"",
     unip_i1:"6 years of teaching", unip_i2:"Hundreds of students", unip_i3:"Alongside an engineering career",
     ccb_role:"Senior Systems Analyst / Specialist",
-    ccb_desc:"Critical systems for credit, warranties, and contracts in a regulated banking environment. Integration between legacy and modern platforms, data modeling. Every architecture decision had direct regulatory implications.",
+    ccb_desc:"Critical systems for credit, warranties and contracts in a regulated banking environment. Integration between legacy and modern platforms with data modeling — every architecture decision had direct regulatory implications.",
     tft_role:"Software Architect",
-    tft_desc:"Architecture consulting for Volkswagen, Ford, HSBC, TAM, GOL, AstraZeneca, MSD, and Valor Econômico. Rapid context-switching that built a genuinely generalist systems perspective.",
-    prod_eyebrow:"Personal projects",
-    geo_desc:"Intelligent geolocation-based alert app. Set points of interest and receive personalized notifications when you get close — <strong>no need to open the app</strong>, running in the background.<br><br>Built from scratch: product, architecture, code, and distribution. The best lab I ever had.",
+    tft_desc:"Architecture consulting for Volkswagen, Ford, HSBC, TAM, GOL, AstraZeneca, MSD and Valor Econômico. Rapid context-switching that built a genuinely generalist perspective on systems and business.",
+    geo_eyebrow:"Founder · Builder",
+    geo_proof:"Proof of Execution",
+    geo_desc:"A product built independently — from product strategy and UX to architecture, engineering and distribution. <strong>From zero to the app stores.</strong><br><br>Not just a side project: proof that I am still a builder — capable of conceiving, building and launching a product from start to finish.",
     geo_cta:"Visit GeoAlert ↗",
     pf1t:"Smart geolocation", pf1b:"Proximity-based alerts without excessive battery drain.",
     pf2t:"Native background", pf2b:"Notifications work even with the app closed, using native iOS and Android APIs.",
-    pf3t:"Full 0 → 1", pf3b:"From idea to app store — product, architecture, code, UX, and distribution.",
+    pf3t:"Full 0 → 1", pf3b:"Product, architecture, code, UX and distribution — all built and launched independently.",
     pf4t:"Modern stack", pf4b:"React Native + Expo, cloud backend, automated CI/CD. Mobile-first architecture.",
     ticker_eyebrow:"Open source",
     ticker_desc:"A Chrome extension to track B3 stocks right in the browser icon. Set price alerts and the icon changes color based on the day's variation — <strong>all in the background</strong>, no need to open anything.<br><br>Built from scratch in pure JavaScript. Open source on GitHub.",
@@ -902,32 +992,36 @@ const i18n = {
     tf3t:"Smart search", tf3b:"Accepts ticker (PETR4, VALE3) or company name. Full focus on B3.",
     tf4t:"Auto-rotation", tf4b:"Switches between tracked assets every minute. Or pin one as default in the icon.",
     sk_eyebrow:"Competencies", sk_title:"What I master",
-    sk1:"Leadership &amp; Management", sk2:"Architecture", sk3:"Technologies", sk4:"Languages",
+    sk1:"Leadership &amp; Management", sk2:"Technology", sk3:"Data &amp; AI", sk4:"Technical",
+    lang1:"Portuguese — native", lang2:"English — advanced", lang3:"Spanish — intermediate", lang4:"French — basic",
     cert:"Post-graduate in Software Architecture — FIAP",
-    nav_ai:"AI",
-    ai_eyebrow:"Artificial Intelligence", ai_title:"AI as decision<br>infrastructure",
-    ai_sub:"I don't use AI as a tool. I use it as leverage for management, product, and data — with persistent context and measurable results.",
-    ai_c1n:"01 — Management", ai_c1t:"Management co-pilot",
-    ai_c1b:"Structures 1:1s, performance reviews, and feedback with AI. Consolidates people history, identifies behavioral patterns and leadership gaps — consistently, not episodically.",
-    ai_c1v:"Turns management into something scalable — less dependent on gut feeling.",
-    ai_c2n:"02 — Data", ai_c2t:"AI connected to real data",
-    ai_c2b:"Persistent context, not loose prompts. Agents connected to real databases (MongoDB, CRM) to support decisions at the core of the business — customer reading, pattern analysis, operational support.",
-    ai_c2v:"Beyond hype → AI applied to the core of the business.",
-    ai_c3n:"03 — Product", ai_c3t:"AI accelerating product",
-    ai_c3b:"GeoAlert built with lean mindset and AI in the loop. Copy, ideation, refinement, store listings, and potential evolution to intelligent behavior-based features.",
-    ai_c3v:"Shortens the cycle: idea → execution → validation.",
-    ai_c4n:"04 — Productivity", ai_c4t:"Productivity amplifier",
-    ai_c4b:"Writes better, structures thinking faster, reduces operational tasks. Creates semi-automated workflows for analysis and communication that multiply individual output.",
+    ai_eyebrow:"AI &amp; Emerging Technology", ai_title:"AI as decision<br>infrastructure",
+    ai_sub:"I explore AI not as a standalone technology, but as infrastructure for decision-making, productivity and product development — applied to real work.",
+    ai_c1n:"01 — Leadership", ai_c1t:"AI-assisted management workflows",
+    ai_c1b:"AI-assisted management workflows: 1:1 structure, performance reviews and feedback. Consolidates people history, identifies behavioral patterns and leadership gaps — consistently, not episodically.",
+    ai_c1v:"More consistent management, less dependent on memory or gut feeling.",
+    ai_c2n:"02 — Data", ai_c2t:"Agents connected to real business context",
+    ai_c2b:"Persistent context connected to real databases (MongoDB, CRM) to support decisions at the core of the business — customer reading, pattern analysis, operational support.",
+    ai_c2v:"AI applied to the core of the business — beyond the hype.",
+    ai_c3n:"03 — Product", ai_c3t:"AI-assisted product development",
+    ai_c3b:"GeoAlert built with AI in the loop. Copy, ideation, refinement, store listings and potential evolution to intelligent behavior-based features.",
+    ai_c3v:"Shorter cycle: idea → execution → validation.",
+    ai_c4n:"04 — Productivity", ai_c4t:"Semi-automated workflows",
+    ai_c4b:"Faster structured analysis, reduced operational tasks, amplified communication. Semi-automated workflows that increase individual output without proportionally increasing effort.",
     ai_c4v:"More output with the same input — delivers above average.",
-    ai_s1v:"3–10×", ai_s1l:"gain in analysis<br>and structuring",
-    ai_s2v:"−50%", ai_s2l:"time to create<br>strategic documents",
+    ai_s1v:"up to 10×", ai_s1l:"in selected analysis<br>and structuring workflows",
+    ai_s2v:"up to −50%", ai_s2l:"time in selected strategic<br>documentation workflows",
     ai_s3v:"0→∞", ai_s3l:"semi-automated<br>management workflows",
-    footer_tag:"Engineering · Product · Data"
+    footer_tag:"Engineering Executive · Technology · People · Business"
   }
 };
 
 function setLang(lang) {
+  localStorage.setItem('lang', lang);
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+  document.title = lang === "pt"
+    ? "Rodrigo Matos Silva | Engineering Executive | Tecnologia, Produto & Dados"
+    : "Rodrigo Matos Silva | Engineering Executive | Technology, Product & Data";
   document.getElementById("btn-pt").classList.toggle("active", lang === "pt");
   document.getElementById("btn-en").classList.toggle("active", lang === "en");
   document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -935,6 +1029,18 @@ function setLang(lang) {
     if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
   });
 }
+
+function toggleMenu() {
+  document.getElementById("mobile-menu").classList.toggle("open");
+}
+
+/* Close mobile menu when clicking outside */
+document.addEventListener("click", e => {
+  const menu = document.getElementById("mobile-menu");
+  if (menu.classList.contains("open") && !e.target.closest("#nav") && !e.target.closest("#mobile-menu")) {
+    menu.classList.remove("open");
+  }
+});
 
 const nav = document.getElementById("nav");
 window.addEventListener("scroll", () => nav.classList.toggle("solid", window.scrollY > 60), { passive: true });
@@ -945,6 +1051,7 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
 
 document.getElementById("year").textContent = new Date().getFullYear();
+setLang(localStorage.getItem('lang') || 'pt');
 </script>
 </body>
 </html>
